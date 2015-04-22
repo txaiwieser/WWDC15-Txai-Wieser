@@ -64,6 +64,7 @@
 		E9DA08271AE725B50078AF48 /* TreesGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA080F1AE725B50078AF48 /* TreesGameScene.swift */; };
 		E9DA08281AE725B50078AF48 /* VeinsGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA08101AE725B50078AF48 /* VeinsGameScene.swift */; };
 		E9DA082A1AE725B50078AF48 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA08121AE725B50078AF48 /* WebViewController.swift */; };
+		E9FA2C4B1AE734A8003E8449 /* BluredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA2C4A1AE734A8003E8449 /* BluredViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +140,7 @@
 		E9DA080F1AE725B50078AF48 /* TreesGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreesGameScene.swift; sourceTree = "<group>"; };
 		E9DA08101AE725B50078AF48 /* VeinsGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VeinsGameScene.swift; sourceTree = "<group>"; };
 		E9DA08121AE725B50078AF48 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		E9FA2C4A1AE734A8003E8449 /* BluredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluredViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				E9DA07D61AE725A70078AF48 /* BlurTableViewController.swift */,
+				E9FA2C4A1AE734A8003E8449 /* BluredViewController.swift */,
 				E9DA07FE1AE725B50078AF48 /* LifeEventDetailViewController.swift */,
 				E9DA08061AE725B50078AF48 /* PersonDetailPageViewController.swift */,
 				E9DA08071AE725B50078AF48 /* PersonPageViewController.swift */,
@@ -519,6 +522,7 @@
 				E9DA07F51AE725A70078AF48 /* ExtrasCollectionViewCell.swift in Sources */,
 				E9DA08131AE725B50078AF48 /* ImageTableViewCell.swift in Sources */,
 				E9DA07E81AE725A70078AF48 /* BlurTableViewController.swift in Sources */,
+				E9FA2C4B1AE734A8003E8449 /* BluredViewController.swift in Sources */,
 				E9DA07EF1AE725A70078AF48 /* Event.swift in Sources */,
 				E9DA07F91AE725A70078AF48 /* Image+Extension.swift in Sources */,
 				E9DA07F31AE725A70078AF48 /* ExtraInfo.swift in Sources */,

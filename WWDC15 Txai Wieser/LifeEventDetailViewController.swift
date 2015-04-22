@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LifeEventDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class LifeEventDetailViewController: BluredViewController, UITableViewDataSource, UITableViewDelegate {
     weak var event:Event?
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {

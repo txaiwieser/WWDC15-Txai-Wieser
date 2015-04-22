@@ -29,7 +29,7 @@ class PersonCollectionViewCell: UICollectionViewCell {
     func initialize() {
     
         let v = UIView(frame: CGRect(origin: CGPoint(size: personCellSize*0.1), size: personCellSize*0.8))
-        v.backgroundColor = UIColor.darkBlue()
+        v.backgroundColor = UIColor.personBlue()
         v.alpha = 0.6
         v.layer.borderWidth = 0
         v.layer.borderColor = UIColor.blackColor().CGColor
@@ -37,7 +37,7 @@ class PersonCollectionViewCell: UICollectionViewCell {
         v.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_4))
         
         let j = UIView(frame: CGRect(origin: CGPoint(size: personCellSize*0.1), size: personCellSize*0.8))
-        j.backgroundColor = UIColor.darkBlue()
+        j.backgroundColor = UIColor.personBlue()
         j.alpha = v.alpha
         j.layer.borderWidth = v.layer.borderWidth
         j.layer.borderColor = v.layer.borderColor

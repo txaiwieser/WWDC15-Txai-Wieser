@@ -13,11 +13,15 @@ class GradientView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.blackColor()
+        self.backgroundColor = UIColor.whiteColor()
     }
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.backgroundColor = UIColor.whiteColor()
+    }
+    
+    override func prepareForInterfaceBuilder() {
         self.backgroundColor = UIColor.blackColor()
     }
 //    override func drawRect(rect: CGRect) {

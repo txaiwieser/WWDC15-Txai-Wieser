@@ -125,6 +125,8 @@ extension UIColor {
     static func darkBlue() -> UIColor {
         return UIColor(red:0.05, green:0.1, blue:0.49, alpha:1)
     }
-    
+    static func personBlue() ->UIColor {
+        return UIColor(red:0.05, green:0.1, blue:0.49, alpha:1)
+    }
 }
 
