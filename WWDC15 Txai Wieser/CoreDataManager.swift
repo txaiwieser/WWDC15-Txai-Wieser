@@ -150,7 +150,7 @@ class CoreDataManager {
         let ev3 = Event.newInstance()
         ev3.name = "Projects"
         ev3.iconName = "appstore_icon"
-        ev3.smallDescription = "I love my country!"
+        ev3.smallDescription = "My Projects!"
         
         
         
@@ -220,46 +220,54 @@ class CoreDataManager {
         // Achievement
         let ei1 = ExtraInfo.newInstance()
         ei1.name = "Veins"
-        ei1.iconName = "education_icon"
+        ei1.iconName = "veins_icon"
         ei1.segueID = "ExperimentsSegue"
+        ei1.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
         
         let ei2 = ExtraInfo.newInstance()
-        ei2.name = "Professional Background"
-        ei2.iconName = "professional_icon"
+        ei2.name = "Trees"
+        ei2.iconName = "trees_icon"
         ei2.segueID = "ExperimentsSegue"
+        ei2.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
 
         let ei3 = ExtraInfo.newInstance()
         ei3.name = "Technical Skills"
-        ei3.iconName = "skills_icon"
+        ei3.iconName = "education_icon"
         ei3.segueID = "ExperimentsSegue"
+        ei3.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
 
         
         let ei4 = ExtraInfo.newInstance()
         ei4.name = "Interests"
-        ei4.iconName = "interests_icon"
+        ei4.iconName = "education_icon"
         ei4.segueID = "ExperimentsSegue"
+        ei4.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
 
         
         let ei5 = ExtraInfo.newInstance()
         ei5.name = "Veins"
         ei5.iconName = "education_icon"
         ei5.segueID = "ExperimentsSegue"
+        ei5.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
         
         let ei6 = ExtraInfo.newInstance()
         ei6.name = "Professional Background"
-        ei6.iconName = "professional_icon"
+        ei6.iconName = "education_icon"
         ei6.segueID = "ExperimentsSegue"
+        ei6.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
         
         let ei7 = ExtraInfo.newInstance()
         ei7.name = "Technical Skills"
-        ei7.iconName = "skills_icon"
+        ei7.iconName = "education_icon"
         ei7.segueID = "ExperimentsSegue"
+        ei7.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
         
         
         let ei8 = ExtraInfo.newInstance()
         ei8.name = "Interests"
-        ei8.iconName = "interests_icon"
+        ei8.iconName = "education_icon"
         ei8.segueID = "ExperimentsSegue"
+        ei8.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
         
         return [ei1, ei2, ei3, ei4, ei5, ei6, ei7, ei8]
     }

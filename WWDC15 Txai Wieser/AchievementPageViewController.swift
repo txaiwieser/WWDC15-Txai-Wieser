@@ -8,9 +8,9 @@
 
 import UIKit
 
-class PersonDetailViewController: UIViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+class AchievementPageViewController: UIViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
-    let pageViewController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
+    let pageViewController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Vertical, options: nil)
 
     weak var person:Person? {
         didSet {

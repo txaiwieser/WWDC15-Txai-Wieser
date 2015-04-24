@@ -13,11 +13,19 @@ class ExperimentsAppleTVViewController: UIViewController {
 
     @IBOutlet weak var skView: SKView!
     
+    var experiment:Int = 0
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         skView.backgroundColor = UIColor.clearColor()
         skView.allowsTransparency = true
-        firstExperiment()
+        switch experiment {
+        case 3:
+            self.thirdExperiment()
+        case 2:
+            self.secondExperiment()
+        default:
+            self.firstExperiment()
+        }
     }
     
     func firstExperiment() {

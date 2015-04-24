@@ -14,9 +14,11 @@ class LifeEventDetailViewController: BluredViewController, UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        self.view = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.Light))
         tableView.estimatedRowHeight = 68.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        let effect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+        tableView.separatorEffect = UIVibrancyEffect(forBlurEffect: effect)
+        tableView.tableFooterView = UIView()
 
     }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -99,9 +101,7 @@ class LifeEventDetailViewController: BluredViewController, UITableViewDataSource
         return cell
     }
     
-    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return UIView()
-    }
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let vc = segue.destinationViewController as? AppDetailTableViewController {

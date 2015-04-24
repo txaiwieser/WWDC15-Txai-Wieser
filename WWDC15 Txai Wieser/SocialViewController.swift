@@ -8,29 +8,30 @@
 
 import UIKit
 
-class SocialViewController: UIViewController {
+class SocialViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var website: String?
     var email: String?
     var facebook: String?
     var twitter: String?
     
     weak var appleTVInterface:WebViewController?
-    @IBOutlet weak var emailButton: UIButton!
-    @IBOutlet weak var facebookButton: UIButton!
-    @IBOutlet weak var twitterButton: UIButton!
-    @IBOutlet weak var websiteButton: UIButton!
+    
+    @IBOutlet weak var contactTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        contactTableView.dataSource = self
+        contactTableView.delegate = self
+        contactTableView.estimatedRowHeight = 44
+        contactTableView.rowHeight = UITableViewAutomaticDimension
+        let effect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+        contactTableView.separatorEffect = UIVibrancyEffect(forBlurEffect: effect)
+
     }
 
     override func viewWillAppear(animated: Bool) {
-        emailButton.setTitle(email, forState: UIControlState.Normal)
-        facebookButton.setTitle(facebook, forState: UIControlState.Normal)
-        twitterButton.setTitle(twitter, forState: UIControlState.Normal)
-        websiteButton.setTitle(website, forState: UIControlState.Normal)
         updateAppleTV()
     }
     override func didReceiveMemoryWarning() {
@@ -48,18 +49,39 @@ class SocialViewController: UIViewController {
         AppDelegate.$.currentAppleTVViewController = vc
     }
 
-    @IBAction func websiteButton(sender: UIButton) {
-        appleTVInterface?.link = website
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row == 1 {
+            
+        }
+        else {
+            appleTVInterface?.link = (tableView.cellForRowAtIndexPath(indexPath) as! ContactTableViewCell).label.text
+        }
     }
     
-    @IBAction func emailButton(sender: UIButton) {
-    }
-    
-    @IBAction func facebookButton(sender: UIButton) {
-        appleTVInterface?.link = facebook
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
     }
 
-    @IBAction func twitterButton(sender: UIButton) {
-        appleTVInterface?.link = twitter
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("contactCell") as! ContactTableViewCell
+        switch indexPath.row {
+        case 0:
+            cell.icon.image = UIImage(named: "website")
+            cell.label.text = website
+        case 1:
+            cell.icon.image = UIImage(named: "email")
+            cell.label.text = email
+        case 2:
+            cell.icon.image = UIImage(named: "facebook")
+            cell.label.text = facebook
+        case 3:
+            cell.icon.image = UIImage(named: "twitter")
+            cell.label.text = twitter
+        default:
+            cell.label.text = "Not Found"
+        }
+        return cell
     }
+    
+    
 }

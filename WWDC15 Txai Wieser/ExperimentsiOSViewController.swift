@@ -8,11 +8,10 @@
 
 import UIKit
 
-class ExperimentsiOSViewController: UIViewController {
-    var experimentName:String?
-    var experimentDescription:String?
-    var experimentImgName:String?
+class ExperimentsiOSViewController: BluredViewController {
+    var experiment:ExtraInfo?
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var imgView: UIImageView!
     override func viewDidLoad() {
@@ -22,8 +21,10 @@ class ExperimentsiOSViewController: UIViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
-        descriptionLabel.text = experimentDescription
-        imgView.image = UIImage(named: experimentImgName!)
+        titleLabel.text = experiment!.name
+        descriptionLabel.text = experiment!.about
+        imgView.image = UIImage(named: experiment!.iconName)
+        updateAppleTV(experiment!)
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,14 +33,15 @@ class ExperimentsiOSViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func updateAppleTV(xp:ExtraInfo) {
+        let appleTVInterface = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AppleTVViewController") as! ExperimentsAppleTVViewController
+        if xp.name == "Veins" {
+            appleTVInterface.experiment = 2
+        }
+        else {
+            appleTVInterface.experiment = 1
+        }
+        AppDelegate.$.currentAppleTVViewController = appleTVInterface
     }
-    */
 
 }

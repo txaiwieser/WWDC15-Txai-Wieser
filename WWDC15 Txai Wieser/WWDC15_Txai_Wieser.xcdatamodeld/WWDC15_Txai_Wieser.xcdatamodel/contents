@@ -26,6 +26,7 @@
         <relationship name="from" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Person" inverseName="lifeEvents" inverseEntity="Person" syncable="YES"/>
     </entity>
     <entity name="ExtraInfo" representedClassName="ExtraInfo" syncable="YES">
+        <attribute name="about" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="iconName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="segueID" optional="YES" attributeType="String" syncable="YES"/>
@@ -60,9 +61,9 @@
         <element name="Achievement" positionX="-198" positionY="135" width="128" height="105"/>
         <element name="App" positionX="-288" positionY="560" width="128" height="165"/>
         <element name="Event" positionX="-54" positionY="36" width="128" height="150"/>
+        <element name="ExtraInfo" positionX="-189" positionY="144" width="128" height="105"/>
         <element name="Image" positionX="-189" positionY="144" width="128" height="60"/>
         <element name="Person" positionX="-342" positionY="-15" width="128" height="255"/>
         <element name="ScreenInfo" positionX="-198" positionY="135" width="128" height="105"/>
-        <element name="ExtraInfo" positionX="-189" positionY="144" width="128" height="90"/>
     </elements>
 </model>

@@ -1,9 +1,9 @@
 //
 //  ExtraInfo.swift
-//  WWDC 2015 - Txai Wieser
+//  WWDC15 Txai Wieser
 //
-//  Created by Txai Wieser on 21/04/15.
-//  Copyright (c) 2015 Txai Wieser. All rights reserved.
+//  Created by Txai Wieser on 24/04/15.
+//  Copyright (c) 2015 TDW. All rights reserved.
 //
 
 import Foundation
@@ -13,7 +13,8 @@ import CoreData
 class ExtraInfo: NSManagedObject {
 
     @NSManaged var iconName: String
-    @NSManaged var segueID: String
     @NSManaged var name: String
+    @NSManaged var segueID: String
+    @NSManaged var about: String
 
 }

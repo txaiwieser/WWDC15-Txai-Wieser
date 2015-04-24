@@ -9,34 +9,78 @@
 import UIKit
 
 @IBDesignable
-class GradientView: UIView {
+class GradientView: UIImageView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.whiteColor()
+        initialize()
     }
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.backgroundColor = UIColor.whiteColor()
+        initialize()
     }
     
     override func prepareForInterfaceBuilder() {
-        self.backgroundColor = UIColor.blackColor()
+        initialize()
+    }
+    func initialize() {
+        self.backgroundColor = UIColor.whiteColor()
+        self.contentMode = UIViewContentMode.ScaleAspectFill
+        self.image = UIImage(named: "background")
     }
 //    override func drawRect(rect: CGRect) {
 //
-//        let context = UIGraphicsGetCurrentContext()
-//        let startColor = UIColor(red:0.141, green:0.741, blue:0.921, alpha:1).colorWithAlphaComponent(0.2)
-//        let endColor = UIColor(red:0.141, green:0.741, blue:0.921, alpha:1)
-//        let colors = [startColor.CGColor, endColor.CGColor]
+//        let ctx = UIGraphicsGetCurrentContext()
+//        let c1 = UIColor.redColor()
+//        let c2 = UIColor.yellowColor()
+//        let c3 = UIColor.blackColor()
+//        let c4 = UIColor.greenColor()
+//        let colors = [c1, c2, c3, c4]
+//        let colorLocations:[CGFloat] = [0.0, 0.3, 0.6, 1.0]
+//        
 //        let colorSpace = CGColorSpaceCreateDeviceRGB()
-//        let colorLocations:[CGFloat] = [0.0, 1.0]
 //        let gradient = CGGradientCreateWithColors(colorSpace, colors, colorLocations)
-//        var startPoint = CGPointZero
-//        var endPoint = CGPoint(x:0.0, y:self.bounds.height)
+//
 //        let center = CGPoint(x: CGRectGetMidX(rect), y: CGRectGetMidY(rect))
 //        let radius = sqrt(pow(self.bounds.width/2, 2)+pow(self.bounds.height/2, 2))*1
-//        CGContextDrawRadialGradient(context, gradient, center, 0, center, radius, 0)
+//        CGContextDrawRadialGradient(ctx, gradient, center, 0, center, radius, 0)
+//        
+//        
+//        
+//        float dim = MIN(self.bounds.size.width, self.bounds.size.height);
+//        float r=dim/4;
+//        float R=dim/2;
+//        
+//        float halfinteriorPerim = M_PI*r;
+//        float halfexteriorPerim = M_PI*R;
+//        float smallBase= halfinteriorPerim/subdiv;
+//        float largeBase= halfexteriorPerim/subdiv;
+//        
+//        let cell = UIBezierPath()
+//        
+//        [cell moveToPoint:NSMakePoint(- smallBase/2, r)];
+//        [cell lineToPoint:NSMakePoint(+ smallBase/2, r)];
+//        
+//        [cell lineToPoint:NSMakePoint( largeBase /2 , R)];
+//        [cell lineToPoint:NSMakePoint(-largeBase /2,  R)];
+//        [cell closePath];
+//        
+//        CGContextTranslateCTM(ctx, +self.bounds.size.width/2, +self.bounds.size.height/2);
+//        
+//        let incr = CGFloat(M_PI)/CGFloat(colors.count)
+//        CGContextScaleCTM(ctx, 0.9, 0.9);
+//        CGContextRotateCTM(ctx, CGFloat(M_PI/2));
+//        CGContextRotateCTM(ctx,-incr/2);
+//        
+//        for color in colors {
+//            color.set()
+//            cell.fill()
+//            cell.stroke()
+//            CGContextRotateCTM(ctx, -incr);
+//        }
+//        
+//        
 //    }
 }
+

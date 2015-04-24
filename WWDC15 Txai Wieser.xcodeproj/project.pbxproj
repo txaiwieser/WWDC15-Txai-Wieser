@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9402DCF1AE7D29400F926BB /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9402DCE1AE7D29400F926BB /* ContactTableViewCell.swift */; };
 		E9665F781AE722E700302714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9665F771AE722E700302714 /* AppDelegate.swift */; };
 		E9665F7B1AE722E700302714 /* WWDC15_Txai_Wieser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9665F791AE722E700302714 /* WWDC15_Txai_Wieser.xcdatamodeld */; };
 		E9665F801AE722E700302714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9665F7E1AE722E700302714 /* Main.storyboard */; };
 		E9665F821AE722E700302714 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9665F811AE722E700302714 /* Images.xcassets */; };
 		E9665F851AE722E700302714 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9665F831AE722E700302714 /* LaunchScreen.xib */; };
 		E9665F911AE722E700302714 /* WWDC15_Txai_WieserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9665F901AE722E700302714 /* WWDC15_Txai_WieserTests.swift */; };
+		E98ECCF51AE97035007D1036 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98ECCF41AE97035007D1036 /* InfoViewController.swift */; };
+		E98ECCF71AE9CBAA007D1036 /* AchievementDetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98ECCF61AE9CBAA007D1036 /* AchievementDetailPageViewController.swift */; };
+		E98ECCF91AE9CBFE007D1036 /* AchievementPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98ECCF81AE9CBFE007D1036 /* AchievementPageViewController.swift */; };
+		E98ECCFB1AE9CC9F007D1036 /* BluredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98ECCFA1AE9CC9F007D1036 /* BluredViewController.swift */; };
+		E98ECCFD1AE9F0E3007D1036 /* ExtraInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98ECCFC1AE9F0E3007D1036 /* ExtraInfo.swift */; };
 		E9DA07CC1AE725970078AF48 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07C21AE725970078AF48 /* Achievement.swift */; };
 		E9DA07CD1AE725970078AF48 /* Achievement+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07C31AE725970078AF48 /* Achievement+Extension.swift */; };
 		E9DA07CE1AE725970078AF48 /* AchievementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07C41AE725970078AF48 /* AchievementCollectionViewCell.swift */; };
-		E9DA07CF1AE725970078AF48 /* AchievementsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07C51AE725970078AF48 /* AchievementsTableViewController.swift */; };
 		E9DA07D01AE725970078AF48 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07C61AE725970078AF48 /* App.swift */; };
 		E9DA07D11AE725970078AF48 /* App+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07C71AE725970078AF48 /* App+Extension.swift */; };
 		E9DA07D21AE725970078AF48 /* AppDelegate+AppleTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07C81AE725970078AF48 /* AppDelegate+AppleTV.swift */; };
 		E9DA07D31AE725970078AF48 /* AppDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07C91AE725970078AF48 /* AppDetailTableViewController.swift */; };
 		E9DA07D41AE725970078AF48 /* AppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07CA1AE725970078AF48 /* AppTableViewCell.swift */; };
 		E9DA07D51AE725970078AF48 /* BackgroundCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07CB1AE725970078AF48 /* BackgroundCollectionViewCell.swift */; };
-		E9DA07E81AE725A70078AF48 /* BlurTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07D61AE725A70078AF48 /* BlurTableViewController.swift */; };
 		E9DA07E91AE725A70078AF48 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07D71AE725A70078AF48 /* CGFloat+Extensions.swift */; };
 		E9DA07EA1AE725A70078AF48 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07D81AE725A70078AF48 /* CGPoint+Extensions.swift */; };
 		E9DA07EB1AE725A70078AF48 /* CGSize+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07D91AE725A70078AF48 /* CGSize+Extensions.swift */; };
@@ -34,7 +38,6 @@
 		E9DA07F01AE725A70078AF48 /* Event+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07DE1AE725A70078AF48 /* Event+Extension.swift */; };
 		E9DA07F11AE725A70078AF48 /* ExperimentsAppleTVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07DF1AE725A70078AF48 /* ExperimentsAppleTVViewController.swift */; };
 		E9DA07F21AE725A70078AF48 /* ExperimentsiOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07E01AE725A70078AF48 /* ExperimentsiOSViewController.swift */; };
-		E9DA07F31AE725A70078AF48 /* ExtraInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07E11AE725A70078AF48 /* ExtraInfo.swift */; };
 		E9DA07F41AE725A70078AF48 /* ExtraInfo+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07E21AE725A70078AF48 /* ExtraInfo+Extension.swift */; };
 		E9DA07F51AE725A70078AF48 /* ExtrasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07E31AE725A70078AF48 /* ExtrasCollectionViewCell.swift */; };
 		E9DA07F61AE725A70078AF48 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07E41AE725A70078AF48 /* GradientView.swift */; };
@@ -64,7 +67,6 @@
 		E9DA08271AE725B50078AF48 /* TreesGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA080F1AE725B50078AF48 /* TreesGameScene.swift */; };
 		E9DA08281AE725B50078AF48 /* VeinsGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA08101AE725B50078AF48 /* VeinsGameScene.swift */; };
 		E9DA082A1AE725B50078AF48 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA08121AE725B50078AF48 /* WebViewController.swift */; };
-		E9FA2C4B1AE734A8003E8449 /* BluredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA2C4A1AE734A8003E8449 /* BluredViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E9402DCE1AE7D29400F926BB /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		E9665F721AE722E700302714 /* WWDC15 Txai Wieser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC15 Txai Wieser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9665F761AE722E700302714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9665F771AE722E700302714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,17 +91,20 @@
 		E9665F8A1AE722E700302714 /* WWDC15 Txai WieserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WWDC15 Txai WieserTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9665F8F1AE722E700302714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9665F901AE722E700302714 /* WWDC15_Txai_WieserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC15_Txai_WieserTests.swift; sourceTree = "<group>"; };
+		E98ECCF41AE97035007D1036 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		E98ECCF61AE9CBAA007D1036 /* AchievementDetailPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementDetailPageViewController.swift; sourceTree = "<group>"; };
+		E98ECCF81AE9CBFE007D1036 /* AchievementPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementPageViewController.swift; sourceTree = "<group>"; };
+		E98ECCFA1AE9CC9F007D1036 /* BluredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluredViewController.swift; sourceTree = "<group>"; };
+		E98ECCFC1AE9F0E3007D1036 /* ExtraInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtraInfo.swift; sourceTree = "<group>"; };
 		E9DA07C21AE725970078AF48 /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		E9DA07C31AE725970078AF48 /* Achievement+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Achievement+Extension.swift"; sourceTree = "<group>"; };
 		E9DA07C41AE725970078AF48 /* AchievementCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementCollectionViewCell.swift; sourceTree = "<group>"; };
-		E9DA07C51AE725970078AF48 /* AchievementsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsTableViewController.swift; sourceTree = "<group>"; };
 		E9DA07C61AE725970078AF48 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		E9DA07C71AE725970078AF48 /* App+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "App+Extension.swift"; sourceTree = "<group>"; };
 		E9DA07C81AE725970078AF48 /* AppDelegate+AppleTV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+AppleTV.swift"; sourceTree = "<group>"; };
 		E9DA07C91AE725970078AF48 /* AppDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailTableViewController.swift; sourceTree = "<group>"; };
 		E9DA07CA1AE725970078AF48 /* AppTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTableViewCell.swift; sourceTree = "<group>"; };
 		E9DA07CB1AE725970078AF48 /* BackgroundCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundCollectionViewCell.swift; sourceTree = "<group>"; };
-		E9DA07D61AE725A70078AF48 /* BlurTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurTableViewController.swift; sourceTree = "<group>"; };
 		E9DA07D71AE725A70078AF48 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		E9DA07D81AE725A70078AF48 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
 		E9DA07D91AE725A70078AF48 /* CGSize+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Extensions.swift"; sourceTree = "<group>"; };
@@ -109,7 +115,6 @@
 		E9DA07DE1AE725A70078AF48 /* Event+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+Extension.swift"; sourceTree = "<group>"; };
 		E9DA07DF1AE725A70078AF48 /* ExperimentsAppleTVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentsAppleTVViewController.swift; sourceTree = "<group>"; };
 		E9DA07E01AE725A70078AF48 /* ExperimentsiOSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentsiOSViewController.swift; sourceTree = "<group>"; };
-		E9DA07E11AE725A70078AF48 /* ExtraInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtraInfo.swift; sourceTree = "<group>"; };
 		E9DA07E21AE725A70078AF48 /* ExtraInfo+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ExtraInfo+Extension.swift"; sourceTree = "<group>"; };
 		E9DA07E31AE725A70078AF48 /* ExtrasCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtrasCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9DA07E41AE725A70078AF48 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -140,7 +145,6 @@
 		E9DA080F1AE725B50078AF48 /* TreesGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreesGameScene.swift; sourceTree = "<group>"; };
 		E9DA08101AE725B50078AF48 /* VeinsGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VeinsGameScene.swift; sourceTree = "<group>"; };
 		E9DA08121AE725B50078AF48 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		E9FA2C4A1AE734A8003E8449 /* BluredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluredViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +258,7 @@
 				E9DA080D1AE725B50078AF48 /* TextTableViewCell.swift */,
 				E9DA080E1AE725B50078AF48 /* TitleTableViewCell.swift */,
 				E9DA07CA1AE725970078AF48 /* AppTableViewCell.swift */,
+				E9402DCE1AE7D29400F926BB /* ContactTableViewCell.swift */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -338,14 +343,15 @@
 		E9735A031AE729F800795EAE /* DetailsViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E9DA07D61AE725A70078AF48 /* BlurTableViewController.swift */,
-				E9FA2C4A1AE734A8003E8449 /* BluredViewController.swift */,
+				E98ECCFA1AE9CC9F007D1036 /* BluredViewController.swift */,
+				E98ECCF41AE97035007D1036 /* InfoViewController.swift */,
 				E9DA07FE1AE725B50078AF48 /* LifeEventDetailViewController.swift */,
-				E9DA08061AE725B50078AF48 /* PersonDetailPageViewController.swift */,
 				E9DA08071AE725B50078AF48 /* PersonPageViewController.swift */,
+				E9DA08061AE725B50078AF48 /* PersonDetailPageViewController.swift */,
 				E9DA080B1AE725B50078AF48 /* SocialViewController.swift */,
 				E9DA07E01AE725A70078AF48 /* ExperimentsiOSViewController.swift */,
-				E9DA07C51AE725970078AF48 /* AchievementsTableViewController.swift */,
+				E98ECCF81AE9CBFE007D1036 /* AchievementPageViewController.swift */,
+				E98ECCF61AE9CBAA007D1036 /* AchievementDetailPageViewController.swift */,
 				E9DA07C91AE725970078AF48 /* AppDetailTableViewController.swift */,
 			);
 			name = DetailsViewControllers;
@@ -356,11 +362,11 @@
 			children = (
 				E9665F791AE722E700302714 /* WWDC15_Txai_Wieser.xcdatamodeld */,
 				E9DA07DB1AE725A70078AF48 /* CoreDataManager.swift */,
+				E98ECCFC1AE9F0E3007D1036 /* ExtraInfo.swift */,
 				E9DA08031AE725B50078AF48 /* Person.swift */,
 				E9DA08041AE725B50078AF48 /* Person+Extension.swift */,
 				E9DA07DD1AE725A70078AF48 /* Event.swift */,
 				E9DA07DE1AE725A70078AF48 /* Event+Extension.swift */,
-				E9DA07E11AE725A70078AF48 /* ExtraInfo.swift */,
 				E9DA07E21AE725A70078AF48 /* ExtraInfo+Extension.swift */,
 				E9DA07E61AE725A70078AF48 /* Image.swift */,
 				E9DA07E71AE725A70078AF48 /* Image+Extension.swift */,
@@ -480,6 +486,7 @@
 				E9DA08251AE725B50078AF48 /* TextTableViewCell.swift in Sources */,
 				E9DA08151AE725B50078AF48 /* Int+Extensions.swift in Sources */,
 				E9DA07ED1AE725A70078AF48 /* CoreDataManager.swift in Sources */,
+				E98ECCFB1AE9CC9F007D1036 /* BluredViewController.swift in Sources */,
 				E9DA07D21AE725970078AF48 /* AppDelegate+AppleTV.swift in Sources */,
 				E9DA07CD1AE725970078AF48 /* Achievement+Extension.swift in Sources */,
 				E9DA07F01AE725A70078AF48 /* Event+Extension.swift in Sources */,
@@ -489,8 +496,8 @@
 				E9DA07CC1AE725970078AF48 /* Achievement.swift in Sources */,
 				E9DA07D11AE725970078AF48 /* App+Extension.swift in Sources */,
 				E9DA07D41AE725970078AF48 /* AppTableViewCell.swift in Sources */,
+				E98ECCF71AE9CBAA007D1036 /* AchievementDetailPageViewController.swift in Sources */,
 				E9DA08161AE725B50078AF48 /* LifeEventCollectionViewCell.swift in Sources */,
-				E9DA07CF1AE725970078AF48 /* AchievementsTableViewController.swift in Sources */,
 				E9DA08271AE725B50078AF48 /* TreesGameScene.swift in Sources */,
 				E9665F781AE722E700302714 /* AppDelegate.swift in Sources */,
 				E9DA08221AE725B50078AF48 /* ScreenInfo+Extension.swift in Sources */,
@@ -501,6 +508,7 @@
 				E9DA08141AE725B50078AF48 /* ImageViewerViewController.swift in Sources */,
 				E9DA07EE1AE725A70078AF48 /* DissmissModalSegue.swift in Sources */,
 				E9DA08281AE725B50078AF48 /* VeinsGameScene.swift in Sources */,
+				E98ECCF91AE9CBFE007D1036 /* AchievementPageViewController.swift in Sources */,
 				E9DA081D1AE725B50078AF48 /* Person+Extension.swift in Sources */,
 				E9DA07EC1AE725A70078AF48 /* ColorPalette.swift in Sources */,
 				E9DA08191AE725B50078AF48 /* MyLifeGraphViewController.swift in Sources */,
@@ -512,6 +520,7 @@
 				E9DA07F81AE725A70078AF48 /* Image.swift in Sources */,
 				E9DA07F71AE725A70078AF48 /* GraphCollectionViewLayout.swift in Sources */,
 				E9DA081F1AE725B50078AF48 /* PersonDetailPageViewController.swift in Sources */,
+				E98ECCF51AE97035007D1036 /* InfoViewController.swift in Sources */,
 				E9DA07D51AE725970078AF48 /* BackgroundCollectionViewCell.swift in Sources */,
 				E9DA07D31AE725970078AF48 /* AppDetailTableViewController.swift in Sources */,
 				E9DA08181AE725B50078AF48 /* MapViewController.swift in Sources */,
@@ -520,12 +529,11 @@
 				E9DA07CE1AE725970078AF48 /* AchievementCollectionViewCell.swift in Sources */,
 				E9DA08211AE725B50078AF48 /* ScreenInfo.swift in Sources */,
 				E9DA07F51AE725A70078AF48 /* ExtrasCollectionViewCell.swift in Sources */,
+				E9402DCF1AE7D29400F926BB /* ContactTableViewCell.swift in Sources */,
+				E98ECCFD1AE9F0E3007D1036 /* ExtraInfo.swift in Sources */,
 				E9DA08131AE725B50078AF48 /* ImageTableViewCell.swift in Sources */,
-				E9DA07E81AE725A70078AF48 /* BlurTableViewController.swift in Sources */,
-				E9FA2C4B1AE734A8003E8449 /* BluredViewController.swift in Sources */,
 				E9DA07EF1AE725A70078AF48 /* Event.swift in Sources */,
 				E9DA07F91AE725A70078AF48 /* Image+Extension.swift in Sources */,
-				E9DA07F31AE725A70078AF48 /* ExtraInfo.swift in Sources */,
 				E9DA07F41AE725A70078AF48 /* ExtraInfo+Extension.swift in Sources */,
 				E9665F7B1AE722E700302714 /* WWDC15_Txai_Wieser.xcdatamodeld in Sources */,
 			);

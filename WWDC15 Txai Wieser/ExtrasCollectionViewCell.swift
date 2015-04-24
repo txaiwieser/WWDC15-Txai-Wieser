@@ -12,8 +12,13 @@ import UIKit
 class ExtrasCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     
-    var segueName:String?
-    var name:String?
+    var extraContent:ExtraInfo? {
+        didSet {
+            if let extra = extraContent {
+                configure(extra)
+            }
+        }
+    }
     var item = 0 {
         didSet {
             self.backgroundColor = UIColor.WWDCsecondary(item)
@@ -38,8 +43,15 @@ class ExtrasCollectionViewCell: UICollectionViewCell {
         self.layer.borderWidth = 0
         self.layer.borderColor = UIColor.myWhite().CGColor
         self.layer.cornerRadius = extraCellSize.radius()
-    }
         
+        if let extra = extraContent {
+            configure(extra)
+        }
+    }
+    
+    func configure(extra:ExtraInfo) {
+        iconImageView.image = UIImage(named: extra.iconName)
+    }
     
     
     

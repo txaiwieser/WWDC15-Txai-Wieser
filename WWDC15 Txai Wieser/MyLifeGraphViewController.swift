@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreData
+import CoreMotion
 
-class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate {
     var person:Person? {
         didSet {
             self.collectionView.reloadData()
@@ -44,6 +45,8 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
         let centerPosition = self.collectionView.layoutAttributesForItemAtIndexPath(NSIndexPath(forItem: 0, inSection: 0))!.center
         
         self.collectionView.scrollRectToVisible(CGRect(origin: centerPosition - frameSize/2, size: self.collectionView.frame.size), animated: true)
+        self.collectionView.delegate = self
+        calibrateParallax()
     }
     
     func updateAppleTV() {
@@ -72,7 +75,7 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
             myVc.event = cell.lifeEvent
         }
         else if let myVc = controller as? ExperimentsiOSViewController, let cell = sender as? ExtrasCollectionViewCell {
-            myVc.experimentName = cell.name
+            myVc.experiment = cell.extraContent
         }
         
         self.isPresentingModal = true
@@ -105,7 +108,8 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let cell = collectionView.cellForItemAtIndexPath(indexPath)!
         if let c = cell as? ExtrasCollectionViewCell {
-            self.performSegueWithIdentifier(c.segueName, sender: cell)
+            let segue = c.extraContent?.segueID
+            self.performSegueWithIdentifier(segue, sender: cell)
         }
     }
     
@@ -177,7 +181,7 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
         case 3:
             cell = collectionView.dequeueReusableCellWithReuseIdentifier("ExtraCell", forIndexPath: indexPath) as! ExtrasCollectionViewCell
             let a = person?.orderedExtraInfosArray()[indexPath.item]
-            (cell as! ExtrasCollectionViewCell).segueName = a?.segueID
+            (cell as! ExtrasCollectionViewCell).extraContent = a
             (cell as! ExtrasCollectionViewCell).item = indexPath.item
         case 4:
             cell = collectionView.dequeueReusableCellWithReuseIdentifier("BackgroundCell", forIndexPath: indexPath) as! BackgroundCollectionViewCell
@@ -189,4 +193,95 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
         
         return cell
     }
+    
+    
+    func calibrateParallax() {
+
+        startMonitoring()
+//        let horizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "motionEffectPoint.x",
+//            type: .TiltAlongHorizontalAxis)
+//        let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "motionEffectPoint.y",
+//            type: .TiltAlongVerticalAxis)
+//        
+//        let x = 100
+//        let y = 200
+//        
+//        horizontalMotionEffect.minimumRelativeValue = -x
+//        horizontalMotionEffect.maximumRelativeValue = x
+//        verticalMotionEffect.minimumRelativeValue = -y
+//        verticalMotionEffect.maximumRelativeValue = y
+//        
+//        let group = UIMotionEffectGroup()
+//        group.motionEffects = [horizontalMotionEffect, verticalMotionEffect]
+//        self.collectionView.addMotionEffect(group)
+        
+//
+////        
+//        let ef = CollectionViewParallaxEffect(ampliX: -100, ampliY: -100, layout: self.collectionView)
+//        
+//        self.collectionView.addMotionEffect(ef)
+//        self.collectionView.addObserver(self, forKeyPath: "contentOffset", options: NSKeyValueObservingOptions.New, context: nil)
+    }
+    override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
+        if keyPath == "contentOffset" {
+            self.collectionView.collectionViewLayout.invalidateLayout()
+        }
+    }
+    
+    
+    // MARK: - UIScrollView Delegate
+    
+    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if motionManager == nil { self.startMonitoring() }
+    }
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        if motionManager != nil { self.stopMonitoring() }
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+//        self.collectionView.collectionViewLayout.invalidateLayout()
+    }
+    
+    var motionManager:CMMotionManager?
+    // MARK: - Core Motion
+    let minimumXOffset:CGFloat = -100
+    let maximumXOffset:CGFloat = 100
+    
+    func startMonitoring() {
+        if motionManager == nil {
+            motionManager = CMMotionManager()
+            motionManager!.gyroUpdateInterval = 1/60
+        }
+        
+        if !motionManager!.gyroActive && motionManager!.gyroAvailable {
+            motionManager!.startGyroUpdatesToQueue(NSOperationQueue.currentQueue(), withHandler: { (gyroData, error) -> Void in
+                    var offsetX = -CGFloat(gyroData.rotationRate.y)
+                    var offsetY = -CGFloat(gyroData.rotationRate.x)
+                    
+                    if offsetX > self.maximumXOffset {
+                        offsetX = self.maximumXOffset
+                    }
+                    else if offsetX < self.minimumXOffset {
+                        offsetX = self.minimumXOffset
+                    }
+                    let p = CGPoint(x: offsetX, y: offsetY)
+                    let ctx = UICollectionViewLayoutInvalidationContext()
+                    ctx.contentOffsetAdjustment = p
+                    self.collectionView.collectionViewLayout.invalidateLayoutWithContext(ctx)
+            })
+        }
+        else {
+            println("No Gyro")
+        }
+        
+    }
+    func stopMonitoring() {
+        motionManager?.stopGyroUpdates()
+        motionManager = nil
+    }
+    
+    
+    
+    
 }

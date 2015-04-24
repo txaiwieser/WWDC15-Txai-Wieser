@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PersonDetailPageViewController: UIViewController {
+class AchievementDetailPageViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var imgView: UIImageView!
     

@@ -1,29 +1,27 @@
 //
-//  BluredViewController.swift
+//  InfoViewController.swift
 //  WWDC15 Txai Wieser
 //
-//  Created by Txai Wieser on 21/04/15.
+//  Created by Txai Wieser on 23/04/15.
 //  Copyright (c) 2015 TDW. All rights reserved.
 //
 
 import UIKit
 
-class BluredViewController: UIViewController {
+class InfoViewController: BluredViewController {
 
+    @IBOutlet weak var text1: UILabel!
+    @IBOutlet weak var icon: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view.backgroundColor = UIColor.clearColor()
         
-        
-        let effect = UIBlurEffect(style: UIBlurEffectStyle.Light)
-        let effectView = UIVisualEffectView(effect: effect)
-        effectView.frame = self.view.frame
-
-        self.view.insertSubview(effectView, atIndex: 0)
-
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(animated: Bool) {
+        icon.image = icon.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        icon.tintColor = text1.textColor
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
