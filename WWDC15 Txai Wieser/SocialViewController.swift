@@ -14,6 +14,8 @@ class SocialViewController: UIViewController, UITableViewDataSource, UITableView
     var facebook: String?
     var twitter: String?
     
+    var color:UIColor = UIColor.whiteColor()
+    
     weak var appleTVInterface:WebViewController?
     
     @IBOutlet weak var contactTableView: UITableView!
@@ -64,6 +66,11 @@ class SocialViewController: UIViewController, UITableViewDataSource, UITableView
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("contactCell") as! ContactTableViewCell
+        cell.label.textColor = self.color
+        cell.icon.image = cell.icon.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        cell.icon.tintColor = self.color
+
+        
         switch indexPath.row {
         case 0:
             cell.icon.image = UIImage(named: "website")

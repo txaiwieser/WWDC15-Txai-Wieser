@@ -16,6 +16,12 @@
         <relationship name="developer" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Person" inverseName="myApps" inverseEntity="Person" syncable="YES"/>
         <relationship name="images" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Image" syncable="YES"/>
     </entity>
+    <entity name="EducationalEvent" representedClassName="EducationalEvent" syncable="YES">
+        <attribute name="about" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Event" representedClassName="Event" syncable="YES">
         <attribute name="iconName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="longDescription1" optional="YES" attributeType="String" syncable="YES"/>
@@ -44,6 +50,7 @@
         <attribute name="profileImageName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="twitter" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="educationalEvents" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="EducationalEvent" syncable="YES"/>
         <relationship name="extraInfos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ExtraInfo" syncable="YES"/>
         <relationship name="lifeAchievements" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Achievement" inverseName="from" inverseEntity="Achievement" syncable="YES"/>
         <relationship name="lifeEvents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="from" inverseEntity="Event" syncable="YES"/>
@@ -63,7 +70,8 @@
         <element name="Event" positionX="-54" positionY="36" width="128" height="150"/>
         <element name="ExtraInfo" positionX="-189" positionY="144" width="128" height="105"/>
         <element name="Image" positionX="-189" positionY="144" width="128" height="60"/>
-        <element name="Person" positionX="-342" positionY="-15" width="128" height="255"/>
+        <element name="Person" positionX="-342" positionY="-15" width="128" height="270"/>
         <element name="ScreenInfo" positionX="-198" positionY="135" width="128" height="105"/>
+        <element name="EducationalEvent" positionX="-198" positionY="135" width="128" height="105"/>
     </elements>
 </model>

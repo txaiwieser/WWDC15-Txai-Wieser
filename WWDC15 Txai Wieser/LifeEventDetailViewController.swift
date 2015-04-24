@@ -10,6 +10,8 @@ import UIKit
 
 class LifeEventDetailViewController: BluredViewController, UITableViewDataSource, UITableViewDelegate {
     weak var event:Event?
+    var color:UIColor = UIColor.whiteColor()
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()

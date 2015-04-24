@@ -110,6 +110,8 @@ extension Person {
         return sorted(array){ $0.order < $1.order }
     }
     
+    
+    
     // ExtraInfos
     func addExtraInfos(values:[ExtraInfo]) {
         for achiev in values {
@@ -131,4 +133,29 @@ extension Person {
         let array = Array(extraInfos) as! [ExtraInfo]
         return sorted(array){ $0.name < $1.name }
     }
+    
+    
+    
+    // EducationalEvent
+    func addEducationalEvents(values:[EducationalEvent]) {
+        for achiev in values {
+            addEducationalEvent(achiev)
+        }
+    }
+    
+    func addEducationalEvent(value:EducationalEvent) {
+        var items = self.mutableSetValueForKey("educationalEvents");
+        items.addObject(value)
+    }
+    
+    func removeEducationalEvent(value:EducationalEvent) {
+        var items = self.mutableSetValueForKey("educationalEvents");
+        items.removeObject(value)
+    }
+    
+    func orderedEducationalEventsArray() -> [EducationalEvent] {
+        let array = Array(educationalEvents) as! [EducationalEvent]
+        return sorted(array){ $0.order > $1.order }
+    }
+    
 }

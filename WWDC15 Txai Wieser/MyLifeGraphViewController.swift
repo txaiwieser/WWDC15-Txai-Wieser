@@ -17,7 +17,8 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
         }
     }
     var isPresentingModal = false
-    
+    var motionManager:CMMotionManager?
+
     
     @IBOutlet weak var collectionView: UICollectionView!
 
@@ -46,7 +47,7 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
         
         self.collectionView.scrollRectToVisible(CGRect(origin: centerPosition - frameSize/2, size: self.collectionView.frame.size), animated: true)
         self.collectionView.delegate = self
-        calibrateParallax()
+        startMonitoring()
     }
     
     func updateAppleTV() {
@@ -68,16 +69,26 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
         let controller = (segue.destinationViewController as? UIViewController)
         controller?.modalPresentationStyle = .OverFullScreen
         
-        if let myVc = controller as? PersonDetailViewController {
+        if let myVc = controller as? PersonDetailViewController, let cell = sender as? PersonCollectionViewCell {
             myVc.person = person
+            myVc.color = cell.tintColor
         }
         else if let myVc = controller as? LifeEventDetailViewController, let cell = sender as? LifeEventCollectionViewCell {
             myVc.event = cell.lifeEvent
+            myVc.color = cell.tintColor
         }
         else if let myVc = controller as? ExperimentsiOSViewController, let cell = sender as? ExtrasCollectionViewCell {
             myVc.experiment = cell.extraContent
+            myVc.color = cell.tintColor
         }
-        
+        else if let myVc = controller as? AchievementDetailViewController, let cell = sender as? AchievementCollectionViewCell {
+            myVc.achievement = cell.achievement
+            myVc.color = cell.tintColor
+        }
+        else if let myVc = controller as? ExtraInfoViewController, let cell = sender as? ExtrasCollectionViewCell {
+            myVc.extraContent = cell.extraContent
+            myVc.color = cell.tintColor
+        }
         self.isPresentingModal = true
     }
     
@@ -108,8 +119,13 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let cell = collectionView.cellForItemAtIndexPath(indexPath)!
         if let c = cell as? ExtrasCollectionViewCell {
-            let segue = c.extraContent?.segueID
-            self.performSegueWithIdentifier(segue, sender: cell)
+            let segue = c.extraContent!.segueID
+            switch segue {
+            case "ExperimentSegue":
+                self.performSegueWithIdentifier(segue, sender: cell)
+            default:
+                self.performSegueWithIdentifier("DefaultExtraSegue", sender: cell)
+            }
         }
     }
     
@@ -195,40 +211,6 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     
-    func calibrateParallax() {
-
-        startMonitoring()
-//        let horizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "motionEffectPoint.x",
-//            type: .TiltAlongHorizontalAxis)
-//        let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "motionEffectPoint.y",
-//            type: .TiltAlongVerticalAxis)
-//        
-//        let x = 100
-//        let y = 200
-//        
-//        horizontalMotionEffect.minimumRelativeValue = -x
-//        horizontalMotionEffect.maximumRelativeValue = x
-//        verticalMotionEffect.minimumRelativeValue = -y
-//        verticalMotionEffect.maximumRelativeValue = y
-//        
-//        let group = UIMotionEffectGroup()
-//        group.motionEffects = [horizontalMotionEffect, verticalMotionEffect]
-//        self.collectionView.addMotionEffect(group)
-        
-//
-////        
-//        let ef = CollectionViewParallaxEffect(ampliX: -100, ampliY: -100, layout: self.collectionView)
-//        
-//        self.collectionView.addMotionEffect(ef)
-//        self.collectionView.addObserver(self, forKeyPath: "contentOffset", options: NSKeyValueObservingOptions.New, context: nil)
-    }
-    override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
-        if keyPath == "contentOffset" {
-            self.collectionView.collectionViewLayout.invalidateLayout()
-        }
-    }
-    
-    
     // MARK: - UIScrollView Delegate
     
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
@@ -239,16 +221,15 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
         if motionManager != nil { self.stopMonitoring() }
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-//        self.collectionView.collectionViewLayout.invalidateLayout()
-    }
     
-    var motionManager:CMMotionManager?
+    
     // MARK: - Core Motion
-    let minimumXOffset:CGFloat = -100
-    let maximumXOffset:CGFloat = 100
+
     
     func startMonitoring() {
+        let minimumXOffset:CGFloat = -80
+        let maximumXOffset:CGFloat = 80
+        
         if motionManager == nil {
             motionManager = CMMotionManager()
             motionManager!.gyroUpdateInterval = 1/60
@@ -256,15 +237,9 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
         
         if !motionManager!.gyroActive && motionManager!.gyroAvailable {
             motionManager!.startGyroUpdatesToQueue(NSOperationQueue.currentQueue(), withHandler: { (gyroData, error) -> Void in
-                    var offsetX = -CGFloat(gyroData.rotationRate.y)
-                    var offsetY = -CGFloat(gyroData.rotationRate.x)
-                    
-                    if offsetX > self.maximumXOffset {
-                        offsetX = self.maximumXOffset
-                    }
-                    else if offsetX < self.minimumXOffset {
-                        offsetX = self.minimumXOffset
-                    }
+                    var offsetX = CGFloat(gyroData.rotationRate.y)
+                    var offsetY = CGFloat(gyroData.rotationRate.x)
+                
                     let p = CGPoint(x: offsetX, y: offsetY)
                     let ctx = UICollectionViewLayoutInvalidationContext()
                     ctx.contentOffsetAdjustment = p

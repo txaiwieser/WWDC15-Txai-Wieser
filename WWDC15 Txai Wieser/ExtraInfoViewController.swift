@@ -8,13 +8,15 @@
 
 import UIKit
 
-class AchievementDetailPageViewController: UIViewController {
-    @IBOutlet weak var label: UILabel!
+class ExtraInfoViewController: BluredViewController {
+    @IBOutlet weak var label: UITextView!
     @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     
-    var text:String?
-    var image:UIImage?
-    var imagesName:[String]?
+    
+    weak var extraContent:ExtraInfo?
+    var color:UIColor = UIColor.whiteColor()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,8 +27,14 @@ class AchievementDetailPageViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        label.text = text
-        imgView.image = image
+        titleLabel.textColor = self.color
+        label.textColor = self.color
+        imgView.image = imgView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        imgView.tintColor = self.color
+        
+        titleLabel.text = extraContent!.name
+        imgView.image = UIImage(named: extraContent!.iconName)
+        label.text = extraContent!.about
         updateAppleTV()
     }
     override func didReceiveMemoryWarning() {
@@ -36,7 +44,6 @@ class AchievementDetailPageViewController: UIViewController {
     
     func updateAppleTV() {
         let appleTVInterface = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AppleTVImageViewer") as! ImageViewerViewController
-        appleTVInterface.imagesName = imagesName
         AppDelegate.$.currentAppleTVViewController = appleTVInterface
     }
     /*

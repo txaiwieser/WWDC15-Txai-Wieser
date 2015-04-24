@@ -13,6 +13,7 @@ class AchievementCollectionViewCell: UICollectionViewCell {
     var item:Int = 0 {
         didSet {
             cellRepresentation.backgroundColor = UIColor.WWDCprimary((item == 0 ? 0 : 2*item))
+            self.tintColor = self.backgroundColor
         }
     }
     var achievement:Achievement? {

@@ -205,7 +205,7 @@ class GraphCollectionViewLayout: UICollectionViewLayout {
         attributes.zIndex = 0
         
         
-        attributes.alpha = 0.5 - (CGFloat(ip.item)/CGFloat(backgroundRowsQtd))*0.04
+        attributes.alpha = 0.62 - (CGFloat(ip.item)/CGFloat(backgroundRowsQtd))*0.04
         // Randomize Parameters
         var circleRadius:CGFloat = 242 + (CGFloat(rowNumber)*42)
         let rangeRadius:CGFloat = 0

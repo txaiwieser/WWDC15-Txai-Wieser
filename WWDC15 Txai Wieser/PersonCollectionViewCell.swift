@@ -42,6 +42,7 @@ class PersonCollectionViewCell: UICollectionViewCell {
         j.layer.borderWidth = v.layer.borderWidth
         j.layer.borderColor = v.layer.borderColor
         j.layer.cornerRadius = v.layer.cornerRadius
+        self.tintColor = UIColor.personBlue()
         
         let a = UIView()
         a.addSubview(v)

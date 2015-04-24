@@ -19,7 +19,9 @@ class PersonDetailViewController: UIViewController, UIPageViewControllerDelegate
             }
         }
     }
-
+    
+    var color:UIColor = UIColor.whiteColor()
+    
     var myViewControllers = [UIViewController]()
    
     override func viewDidLoad() {
@@ -41,7 +43,10 @@ class PersonDetailViewController: UIViewController, UIPageViewControllerDelegate
         // Do any additional setup after loading the view.
         
     }
-
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
 
     func reloadPageView(p:Person) {
         
@@ -49,6 +54,7 @@ class PersonDetailViewController: UIViewController, UIPageViewControllerDelegate
             let vc = self.storyboard!.instantiateViewControllerWithIdentifier("Person1ID") as! PersonDetailPageViewController
             vc.text = screen.text
             vc.image = UIImage(named: screen.iconName)
+            vc.color = self.color
             let array = Array(screen.images) as! [Image]
             vc.imagesName = array.map { $0.imgName }
             myViewControllers.append(vc)
@@ -59,6 +65,7 @@ class PersonDetailViewController: UIViewController, UIPageViewControllerDelegate
         vc1.facebook = p.facebook
         vc1.twitter = p.twitter
         vc1.website = p.website
+        vc1.color = self.color
         myViewControllers.append(vc1)
         
         

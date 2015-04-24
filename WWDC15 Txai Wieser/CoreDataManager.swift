@@ -37,7 +37,7 @@ class CoreDataManager {
         txai.addEvents(registerEvents(txai))
         txai.addScreenInfos(registerScreenInfos(txai))
         txai.addExtraInfos(registerExtraInfo(txai))
-        
+        txai.addEducationalEvents(registerEducationalEvents(txai))
         
         let delegate = AppDelegate.$
         var err: NSErrorPointer = nil
@@ -111,20 +111,51 @@ class CoreDataManager {
         let ach2 = Achievement.newInstance()
         ach2.name = "Professional Background"
         ach2.iconName = "professional_icon"
-
+        ach2.longDescription = "TextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCell. TextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCell. \n\n\nTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCell"
+        
         let ach3 = Achievement.newInstance()
         ach3.name = "Technical Skills"
         ach3.iconName = "skills_icon"
-        
+        ach3.longDescription = "TextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCell. TextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCell. \n\n\nTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCell"
         
         let ach4 = Achievement.newInstance()
         ach4.name = "Interests"
         ach4.iconName = "interests_icon"
-        
+        ach4.longDescription = "TextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCell. TextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCell. \n\n\nTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCell"
         
         
         ach1.from = p; ach2.from = p; ach3.from = p; ach4.from = p
         return [ach1, ach2, ach3, ach4]
+    }
+    
+    func registerEducationalEvents(p:Person) -> [EducationalEvent] {
+        // Achievement
+        let ee1 = EducationalEvent.newInstance()
+        ee1.order = 1
+        ee1.name = "E.E.E.M ÉRICO VERÍSSIMO"
+        ee1.time = "Completed in 2009"
+        ee1.about = "High School."
+        
+        let ee2 = EducationalEvent.newInstance()
+        ee2.order = 3
+        ee2.name = "E.E.P. SENAI PORTO ALEGRE"
+        ee2.time = "Jul 2009 - Jul 2011"
+        ee2.about = "Electronics Technician (Post High School) - Software and Hardware."
+        
+        let ee3 = EducationalEvent.newInstance()
+        ee3.order = 4
+        ee3.name = "UFRGS - FEDERAL UNIVERSITY OF RIO GRANDE DO SUL"
+        ee3.time = "Started in 2012"
+        ee3.about = "Computer Engineering. UFRGS has one of the best Computer Engeneering course of Brazil! I am proud to study there."
+        
+        
+        let ee4 = EducationalEvent.newInstance()
+        ee4.order = 2
+        ee4.name = "CIC INFORMÁTICA"
+        ee4.time = "Completed in 2009"
+        ee4.about = "3D Modeling and Graphic Designing technical classes."
+        
+        return [ee1, ee2, ee3, ee4]
     }
     
     
@@ -221,7 +252,7 @@ class CoreDataManager {
         let ei1 = ExtraInfo.newInstance()
         ei1.name = "Veins"
         ei1.iconName = "veins_icon"
-        ei1.segueID = "ExperimentsSegue"
+        ei1.segueID = "ExperimentSegue"
         ei1.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
         
         let ei2 = ExtraInfo.newInstance()
@@ -231,42 +262,42 @@ class CoreDataManager {
         ei2.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
 
         let ei3 = ExtraInfo.newInstance()
-        ei3.name = "Technical Skills"
-        ei3.iconName = "education_icon"
-        ei3.segueID = "ExperimentsSegue"
-        ei3.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
+        ei3.name = "Swift"
+        ei3.iconName = "swift_icon"
+        ei3.segueID = ""
+        ei3.about = "Swift blab balbalbalor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
 
         
         let ei4 = ExtraInfo.newInstance()
-        ei4.name = "Interests"
-        ei4.iconName = "education_icon"
-        ei4.segueID = "ExperimentsSegue"
+        ei4.name = "Brazil"
+        ei4.iconName = "brazil_icon"
+        ei4.segueID = ""
         ei4.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
 
         
         let ei5 = ExtraInfo.newInstance()
-        ei5.name = "Veins"
-        ei5.iconName = "education_icon"
-        ei5.segueID = "ExperimentsSegue"
+        ei5.name = "Community Work"
+        ei5.iconName = "community_icon"
+        ei5.segueID = ""
         ei5.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
         
         let ei6 = ExtraInfo.newInstance()
-        ei6.name = "Professional Background"
-        ei6.iconName = "education_icon"
-        ei6.segueID = "ExperimentsSegue"
+        ei6.name = "Drones"
+        ei6.iconName = "drone_icon"
+        ei6.segueID = ""
         ei6.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
         
         let ei7 = ExtraInfo.newInstance()
-        ei7.name = "Technical Skills"
-        ei7.iconName = "education_icon"
-        ei7.segueID = "ExperimentsSegue"
+        ei7.name = "NO DESCRIPTION"
+        ei7.iconName = ""
+        ei7.segueID = ""
         ei7.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
         
         
         let ei8 = ExtraInfo.newInstance()
-        ei8.name = "Interests"
-        ei8.iconName = "education_icon"
-        ei8.segueID = "ExperimentsSegue"
+        ei8.name = "NO DESCRIPTION"
+        ei8.iconName = ""
+        ei8.segueID = ""
         ei8.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
         
         return [ei1, ei2, ei3, ei4, ei5, ei6, ei7, ei8]

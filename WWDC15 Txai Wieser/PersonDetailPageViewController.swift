@@ -15,10 +15,12 @@ class PersonDetailPageViewController: UIViewController {
     var text:String?
     var image:UIImage?
     var imagesName:[String]?
+    
+    var color:UIColor = UIColor.whiteColor()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         
     }
 
@@ -27,6 +29,11 @@ class PersonDetailPageViewController: UIViewController {
         
         label.text = text
         imgView.image = image
+        
+        label.textColor = self.color
+        imgView.image = imgView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        imgView.tintColor = self.color
+
         updateAppleTV()
     }
     override func didReceiveMemoryWarning() {

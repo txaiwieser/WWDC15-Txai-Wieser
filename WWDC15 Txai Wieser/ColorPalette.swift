@@ -118,6 +118,29 @@ extension UIColor {
         }
     }
     
+    static func WWDCtertiary(index:Int) -> UIColor {
+        switch index%8 {
+        case 6:
+            return UIColor(red:1, green:0.62, blue:0.88, alpha:1)
+        case 7:
+            return UIColor(red:1, green:0.42, blue:0.4, alpha:1)
+        case 0:
+            return UIColor(red:1, green:0.62, blue:0.47, alpha:1)
+        case 1:
+            return UIColor(red:0.99, green:0.83, blue:0.47, alpha:1)
+        case 2:
+            return UIColor(red:0.47, green:0.93, blue:0.9, alpha:1)
+        case 3:
+            return UIColor(red:0.24, green:0.64, blue:0.99, alpha:1)
+        case 4:
+            return UIColor(red:0.69, green:0.36, blue:0.97, alpha:1)
+        case 5:
+            return UIColor(red:0.9, green:0.46, blue:0.95, alpha:1)
+        default:
+            return UIColor.blackColor()
+        }
+    }
+    
     static func darkerBlue() -> UIColor {
         return UIColor(red:0.07, green:0.09, blue:0.19, alpha:1)
     }

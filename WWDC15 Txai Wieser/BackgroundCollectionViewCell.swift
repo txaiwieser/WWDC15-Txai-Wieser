@@ -15,7 +15,8 @@ class BackgroundCollectionViewCell: UICollectionViewCell {
         didSet {
             let name = "cellIcon_" + String(self.item%19)
             self.iconImageView.image = UIImage(named: name)
-            self.backgroundColor = UIColor.WWDCsecondary(item)
+            self.backgroundColor = UIColor.WWDCtertiary(item)
+            self.tintColor = self.backgroundColor
         }
     }
     override init(frame: CGRect) {

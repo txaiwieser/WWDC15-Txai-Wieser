@@ -13,6 +13,7 @@ class LifeEventCollectionViewCell: UICollectionViewCell {
     var item:Int = 0 {
         didSet {
             self.backgroundColor = UIColor.WWDCprimary((item == 0 ? 1 : 2*item+1))
+            self.tintColor = self.backgroundColor
         }
     }
     var lifeEvent:Event? {

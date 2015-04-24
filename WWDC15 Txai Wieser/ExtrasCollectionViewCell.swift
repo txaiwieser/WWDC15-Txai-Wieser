@@ -22,6 +22,7 @@ class ExtrasCollectionViewCell: UICollectionViewCell {
     var item = 0 {
         didSet {
             self.backgroundColor = UIColor.WWDCsecondary(item)
+            self.tintColor = self.backgroundColor
         }
     }
     override init(frame: CGRect) {
