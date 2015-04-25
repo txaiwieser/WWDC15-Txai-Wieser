@@ -19,6 +19,7 @@ class InfoViewController: BluredViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         icon.image = icon.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         icon.tintColor = text1.textColor
     }

@@ -90,5 +90,13 @@ class SocialViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        // Remove seperator inset
+        cell.separatorInset = UIEdgeInsetsZero
+        // Prevent the cell from inheriting the Table View's margin settings
+        cell.preservesSuperviewLayoutMargins = false
+        // Explictly set your cell's layout margins
+        cell.layoutMargins = UIEdgeInsetsZero
+    }
     
 }

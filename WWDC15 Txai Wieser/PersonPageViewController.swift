@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PersonDetailViewController: UIViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+class PersonDetailViewController: BluredViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
     let pageViewController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
 
@@ -20,7 +20,11 @@ class PersonDetailViewController: UIViewController, UIPageViewControllerDelegate
         }
     }
     
-    var color:UIColor = UIColor.whiteColor()
+    var color:UIColor = UIColor.whiteColor() {
+        didSet {
+            color = color.darkerColor(nil)
+        }
+    }
     
     var myViewControllers = [UIViewController]()
    
@@ -29,29 +33,20 @@ class PersonDetailViewController: UIViewController, UIPageViewControllerDelegate
         self.pageViewController.delegate = self
         self.pageViewController.dataSource = self
         self.addChildViewController(pageViewController)
-        self.view.insertSubview(pageViewController.view, atIndex: 0)
+        self.view.insertSubview(pageViewController.view, atIndex: 2)
         
         self.view.backgroundColor = UIColor.clearColor()
-        
-        
-        let effect = UIBlurEffect(style: UIBlurEffectStyle.Light)
-        let effectView = UIVisualEffectView(effect: effect)
-        effectView.frame = self.view.frame
-        
-        self.view.insertSubview(effectView, atIndex: 0)
         
         // Do any additional setup after loading the view.
         
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-    }
 
     func reloadPageView(p:Person) {
         
         for screen in p.orderedScreenInfosArray() {
             let vc = self.storyboard!.instantiateViewControllerWithIdentifier("Person1ID") as! PersonDetailPageViewController
+            vc.view.backgroundColor = UIColor.clearColor()
             vc.text = screen.text
             vc.image = UIImage(named: screen.iconName)
             vc.color = self.color

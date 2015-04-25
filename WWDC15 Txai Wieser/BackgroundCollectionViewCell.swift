@@ -13,7 +13,7 @@ class BackgroundCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     var item:Int = 0 {
         didSet {
-            let name = "cellIcon_" + String(self.item%19)
+            let name = "cellIcon_" + String(self.item%18)
             self.iconImageView.image = UIImage(named: name)
             self.backgroundColor = UIColor.WWDCtertiary(item)
             self.tintColor = self.backgroundColor

@@ -14,6 +14,7 @@
 		E956BA5D1AEA85F7007C1F58 /* EducationalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956BA5C1AEA85F7007C1F58 /* EducationalEvent.swift */; };
 		E956BA5F1AEA861F007C1F58 /* EducationalEvent+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956BA5E1AEA861F007C1F58 /* EducationalEvent+Extension.swift */; };
 		E956BA611AEA9E83007C1F58 /* ExtraInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956BA601AEA9E83007C1F58 /* ExtraInfoViewController.swift */; };
+		E956BA631AEB0679007C1F58 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956BA621AEB0679007C1F58 /* UIColor+Extension.swift */; };
 		E9665F781AE722E700302714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9665F771AE722E700302714 /* AppDelegate.swift */; };
 		E9665F7B1AE722E700302714 /* WWDC15_Txai_Wieser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9665F791AE722E700302714 /* WWDC15_Txai_Wieser.xcdatamodeld */; };
 		E9665F801AE722E700302714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9665F7E1AE722E700302714 /* Main.storyboard */; };
@@ -90,6 +91,7 @@
 		E956BA5C1AEA85F7007C1F58 /* EducationalEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationalEvent.swift; sourceTree = "<group>"; };
 		E956BA5E1AEA861F007C1F58 /* EducationalEvent+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EducationalEvent+Extension.swift"; sourceTree = "<group>"; };
 		E956BA601AEA9E83007C1F58 /* ExtraInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtraInfoViewController.swift; sourceTree = "<group>"; };
+		E956BA621AEB0679007C1F58 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		E9665F721AE722E700302714 /* WWDC15 Txai Wieser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC15 Txai Wieser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9665F761AE722E700302714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9665F771AE722E700302714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				E9665F811AE722E700302714 /* Images.xcassets */,
 				E9665F831AE722E700302714 /* LaunchScreen.xib */,
 				E9DA07DA1AE725A70078AF48 /* ColorPalette.swift */,
+				E956BA621AEB0679007C1F58 /* UIColor+Extension.swift */,
 				E9DA07DC1AE725A70078AF48 /* DissmissModalSegue.swift */,
 			);
 			name = Others;
@@ -528,6 +531,7 @@
 				E9DA08241AE725B50078AF48 /* SocialViewController.swift in Sources */,
 				E9DA07F81AE725A70078AF48 /* Image.swift in Sources */,
 				E9DA07F71AE725A70078AF48 /* GraphCollectionViewLayout.swift in Sources */,
+				E956BA631AEB0679007C1F58 /* UIColor+Extension.swift in Sources */,
 				E9DA081F1AE725B50078AF48 /* PersonDetailPageViewController.swift in Sources */,
 				E98ECCF51AE97035007D1036 /* InfoViewController.swift in Sources */,
 				E956BA5F1AEA861F007C1F58 /* EducationalEvent+Extension.swift in Sources */,

@@ -27,10 +27,6 @@ class ExtraInfoViewController: BluredViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        titleLabel.textColor = self.color
-        label.textColor = self.color
-        imgView.image = imgView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-        imgView.tintColor = self.color
         
         titleLabel.text = extraContent!.name
         imgView.image = UIImage(named: extraContent!.iconName)
@@ -41,6 +37,7 @@ class ExtraInfoViewController: BluredViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     func updateAppleTV() {
         let appleTVInterface = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AppleTVImageViewer") as! ImageViewerViewController

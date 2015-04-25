@@ -11,7 +11,6 @@ import UIKit
 class ExperimentsiOSViewController: BluredViewController {
     var experiment:ExtraInfo?
     var color:UIColor = UIColor.whiteColor()
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UITextView!
     @IBOutlet weak var imgView: UIImageView!
@@ -27,10 +26,10 @@ class ExperimentsiOSViewController: BluredViewController {
         imgView.image = UIImage(named: experiment!.iconName)
         
         
-        titleLabel.textColor = self.color
-        descriptionLabel.textColor = self.color
-        imgView.image = imgView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-        imgView.tintColor = self.color
+//        titleLabel.textColor = self.color
+//        descriptionLabel.textColor = self.color
+//        imgView.image = imgView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+//        imgView.tintColor = self.color
 
         
         updateAppleTV(experiment!)

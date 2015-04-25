@@ -16,7 +16,6 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
             self.collectionView.reloadData()
         }
     }
-    var isPresentingModal = false
     var motionManager:CMMotionManager?
 
     
@@ -39,7 +38,6 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     override func viewDidAppear(animated: Bool) {
-        self.isPresentingModal = false
         self.setNeedsStatusBarAppearanceUpdate()
         updateAppleTV()
         let frameSize = self.collectionView.frame.size
@@ -89,24 +87,17 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
             myVc.extraContent = cell.extraContent
             myVc.color = cell.tintColor
         }
-        self.isPresentingModal = true
     }
     
     
     @IBAction func dismissAnyModel() {
         self.dismissViewControllerAnimated(true, completion: nil)
-        self.isPresentingModal = false
         self.setNeedsStatusBarAppearanceUpdate()
         updateAppleTV()
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        if self.isPresentingModal {
-            return UIStatusBarStyle.LightContent
-        }
-        else {
-            return UIStatusBarStyle.Default
-        }
+        return UIStatusBarStyle.LightContent
     }
 
     override func preferredStatusBarUpdateAnimation() -> UIStatusBarAnimation {
@@ -167,7 +158,7 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
             case 3:
                 return p.extraInfos.count
             case 4:
-                return 2*backgroundRowslines*backgroundRowsQtd
+                return backgroundRowslines*backgroundRowsQtd
             default:
                 assertionFailure("No itens on Section")
                 return 0
@@ -182,6 +173,8 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
         switch indexPath.section {
         case 0:
             cell = collectionView.dequeueReusableCellWithReuseIdentifier("PersonCell", forIndexPath: indexPath) as! PersonCollectionViewCell
+            (cell as! PersonCollectionViewCell).firstName.text = person?.firstName
+            (cell as! PersonCollectionViewCell).lastName.text = person?.lastName
         case 1:
             cell = collectionView.dequeueReusableCellWithReuseIdentifier("AchievementCell", forIndexPath: indexPath) as! AchievementCollectionViewCell
             let a = person?.orderedAchievementsArray()[indexPath.item]

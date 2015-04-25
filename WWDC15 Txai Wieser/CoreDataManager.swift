@@ -144,16 +144,16 @@ class CoreDataManager {
         
         let ee3 = EducationalEvent.newInstance()
         ee3.order = 4
-        ee3.name = "UFRGS - FEDERAL UNIVERSITY OF RIO GRANDE DO SUL"
+        ee3.name = "FEDERAL UNIVERSITY OF RIO GRANDE DO SUL"
         ee3.time = "Started in 2012"
-        ee3.about = "Computer Engineering. UFRGS has one of the best Computer Engeneering course of Brazil! I am proud to study there."
+        ee3.about = "Computer engineering. UFRGS has one of the best computer engeneering course of Brazil! I am proud to study there."
         
         
         let ee4 = EducationalEvent.newInstance()
         ee4.order = 2
         ee4.name = "CIC INFORMÁTICA"
         ee4.time = "Completed in 2009"
-        ee4.about = "3D Modeling and Graphic Designing technical classes."
+        ee4.about = "3D modeling and graphic designing technical classes."
         
         return [ee1, ee2, ee3, ee4]
     }
@@ -288,15 +288,15 @@ class CoreDataManager {
         ei6.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
         
         let ei7 = ExtraInfo.newInstance()
-        ei7.name = "NO DESCRIPTION"
-        ei7.iconName = ""
+        ei7.name = "Sports"
+        ei7.iconName = "windsurf_icon"
         ei7.segueID = ""
         ei7.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
         
         
         let ei8 = ExtraInfo.newInstance()
-        ei8.name = "NO DESCRIPTION"
-        ei8.iconName = ""
+        ei8.name = "Music"
+        ei8.iconName = "music_icon"
         ei8.segueID = ""
         ei8.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
         

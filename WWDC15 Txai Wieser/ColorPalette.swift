@@ -96,50 +96,37 @@ extension UIColor {
     }
     
     static func WWDCsecondary(index:Int) -> UIColor {
+        return UIColor.newWWDCtertiary(index).darkerColor(0.2)
+    }
+    
+    static func WWDCtertiary(index:Int) -> UIColor {
+        return UIColor.newWWDCtertiary(index).darkerColor(0.3)
+    }
+    
+    
+    static func newWWDCtertiary(index:Int) -> UIColor {
         switch index%8 {
-        case 6:
-            return UIColor(red:0.82, green:0.23, blue:0.63, alpha:1)
-        case 7:
-            return UIColor(red:0.75, green:0.11, blue:0.26, alpha:1)
         case 0:
-            return UIColor(red:0.92, green:0.27, blue:0.14, alpha:1)
+            return UIColor(red:1, green:0.88, blue:0.04, alpha:1)
         case 1:
-            return UIColor(red:0.92, green:0.49, blue:0.13, alpha:1)
+            return UIColor(red:0.76, green:0.84, blue:0.23, alpha:1)
         case 2:
-            return UIColor(red:0.15, green:0.67, blue:0.64, alpha:1)
+            return UIColor(red:0.36, green:0.73, blue:0.46, alpha:1)
         case 3:
-            return UIColor(red:0.07, green:0.25, blue:0.93, alpha:1)
+            return UIColor(red:0.36, green:0.69, blue:0.89, alpha:1)
         case 4:
-            return UIColor(red:0.59, green:0.13, blue:0.78, alpha:1)
+            return UIColor(red:0.54, green:0.52, blue:0.8, alpha:1)
         case 5:
-            return UIColor(red:0.38, green:0.13, blue:0.8, alpha:1)
+            return UIColor(red:0.78, green:0.51, blue:0.71, alpha:1)
+        case 6:
+            return UIColor(red:0.94, green:0.33, blue:0.38, alpha:1)
+        case 7:
+            return UIColor(red:0.96, green:0.55, blue:0.22, alpha:1)
         default:
             return UIColor.blackColor()
         }
     }
     
-    static func WWDCtertiary(index:Int) -> UIColor {
-        switch index%8 {
-        case 6:
-            return UIColor(red:1, green:0.62, blue:0.88, alpha:1)
-        case 7:
-            return UIColor(red:1, green:0.42, blue:0.4, alpha:1)
-        case 0:
-            return UIColor(red:1, green:0.62, blue:0.47, alpha:1)
-        case 1:
-            return UIColor(red:0.99, green:0.83, blue:0.47, alpha:1)
-        case 2:
-            return UIColor(red:0.47, green:0.93, blue:0.9, alpha:1)
-        case 3:
-            return UIColor(red:0.24, green:0.64, blue:0.99, alpha:1)
-        case 4:
-            return UIColor(red:0.69, green:0.36, blue:0.97, alpha:1)
-        case 5:
-            return UIColor(red:0.9, green:0.46, blue:0.95, alpha:1)
-        default:
-            return UIColor.blackColor()
-        }
-    }
     
     static func darkerBlue() -> UIColor {
         return UIColor(red:0.07, green:0.09, blue:0.19, alpha:1)
@@ -149,7 +136,7 @@ extension UIColor {
         return UIColor(red:0.05, green:0.1, blue:0.49, alpha:1)
     }
     static func personBlue() ->UIColor {
-        return UIColor(red:0.05, green:0.1, blue:0.49, alpha:1)
+        return UIColor(red:0.78, green:0.78, blue:0.78, alpha:1)
     }
 }
 

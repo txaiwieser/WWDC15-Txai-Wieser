@@ -19,6 +19,7 @@ class LifeEventDetailViewController: BluredViewController, UITableViewDataSource
         tableView.estimatedRowHeight = 68.0
         tableView.rowHeight = UITableViewAutomaticDimension
         let effect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+
         tableView.separatorEffect = UIVibrancyEffect(forBlurEffect: effect)
         tableView.tableFooterView = UIView()
 
@@ -77,10 +78,16 @@ class LifeEventDetailViewController: BluredViewController, UITableViewDataSource
         switch indexPath.section {
         case 0:
             cell = tableView.dequeueReusableCellWithIdentifier("imageCell") as! ImageTableViewCell
-            (cell as! ImageTableViewCell).imgView.image = UIImage(named: event!.iconName)
+            let c = (cell as! ImageTableViewCell)
+            c.imgView.image = UIImage(named: event!.iconName)
+            c.imgView.image = c.imgView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+            c.imgView.tintColor = self.color
+
         case 1:
             cell = tableView.dequeueReusableCellWithIdentifier("titleCell") as! TitleTableViewCell
-            (cell as! TitleTableViewCell).label?.text = event?.smallDescription
+            let c = (cell as! TitleTableViewCell)
+            c.label.text = event?.smallDescription
+            
         case 2:
             if event?.name == "Projects" {
                 cell = tableView.dequeueReusableCellWithIdentifier("appCell") as! AppTableViewCell
@@ -91,19 +98,28 @@ class LifeEventDetailViewController: BluredViewController, UITableViewDataSource
             }
         default:
             cell = tableView.dequeueReusableCellWithIdentifier("textCell") as! TextTableViewCell
+            let c = (cell as! TextTableViewCell)
             switch indexPath.row {
             case 2:
-                (cell as! TextTableViewCell).label?.text = "\n" + event!.longDescription3!
+                c.label?.text = "\n" + event!.longDescription3!
             case 1:
-                (cell as! TextTableViewCell).label?.text = "\n" + event!.longDescription2! + "\n"
+                c.label?.text = "\n" + event!.longDescription2! + "\n"
             default:
-                (cell as! TextTableViewCell).label?.text = event!.longDescription1! + "\n"
+                c.label?.text = event!.longDescription1! + "\n"
             }
         }
         return cell
     }
     
-
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        // Remove seperator inset
+        cell.separatorInset = UIEdgeInsetsZero
+        // Prevent the cell from inheriting the Table View's margin settings
+        cell.preservesSuperviewLayoutMargins = false
+        // Explictly set your cell's layout margins
+        cell.layoutMargins = UIEdgeInsetsZero
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let vc = segue.destinationViewController as? AppDetailTableViewController {

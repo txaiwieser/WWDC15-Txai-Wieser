@@ -22,8 +22,8 @@ class AchievementDetailViewController: BluredViewController, UITableViewDataSour
         let effect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
         tableView.separatorEffect = UIVibrancyEffect(forBlurEffect: effect)
         tableView.tableFooterView = UIView()
-
     }
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         var number = 2
         if let ach = achievement {
@@ -66,7 +66,6 @@ class AchievementDetailViewController: BluredViewController, UITableViewDataSour
             cell = tableView.dequeueReusableCellWithIdentifier("titleCell") as! TitleTableViewCell
             let c = (cell as! TitleTableViewCell)
             c.label?.text = achievement!.name
-            c.label.textColor = self.color
         case 2:
             switch achievement!.name {
             case "Education":
@@ -76,15 +75,11 @@ class AchievementDetailViewController: BluredViewController, UITableViewDataSour
                     c.label1.text = ed?.name
                     c.label2.text = ed?.time
                     c.label3.text = ed?.about
-                    c.label1.textColor = self.color
-                    c.label2.textColor = self.color.colorWithAlphaComponent(0.6)
-                    c.label3.textColor = self.color
 
             default:
                 cell = tableView.dequeueReusableCellWithIdentifier("textCell") as! TextTableViewCell
                 let c = (cell as! TextTableViewCell)
                 c.label?.text = achievement!.longDescription
-                c.label.textColor = self.color
             }
         default:
             cell = tableView.dequeueReusableCellWithIdentifier("textCell") as! TextTableViewCell
@@ -93,6 +88,14 @@ class AchievementDetailViewController: BluredViewController, UITableViewDataSour
     }
     
 
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        // Remove seperator inset
+        cell.separatorInset = UIEdgeInsetsZero
+        // Prevent the cell from inheriting the Table View's margin settings
+        cell.preservesSuperviewLayoutMargins = false
+        // Explictly set your cell's layout margins
+        cell.layoutMargins = UIEdgeInsetsZero
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let vc = segue.destinationViewController as? AppDetailTableViewController {

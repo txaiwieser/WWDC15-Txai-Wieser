@@ -8,13 +8,13 @@
 
 import UIKit
 
-let personCellSize = CGSize(width: 180, height: 180)
+let personCellSize = CGSize(width: 168, height: 168)
 let achievementCellSize = CGSize(width: 100, height: 100)
 let eventCellSize = CGSize(width: 80, height: 80)
-let backgroundCellSize = CGSize(width: 60, height: 60)
-let extraCellSize = CGSize(width: 74, height: 74)
-let appCellSize = CGSize(width: 72, height: 72)
-let backgroundRowsQtd = 8
+let backgroundCellSize = CGSize(width: 80, height: 80)
+let extraCellSize = CGSize(width: 80, height: 80)
+let appCellSize = CGSize(width: 70, height: 70)
+let backgroundRowsQtd = 16
 let backgroundRowslines = 6
 
 
@@ -123,7 +123,7 @@ class GraphCollectionViewLayout: UICollectionViewLayout {
         
         
         // Randomize Parameters
-        var circleRadius:CGFloat = 140
+        var circleRadius:CGFloat = 132
         let rangeRadius:CGFloat = 0
         let spreadVariation:Int = 1
         
@@ -150,7 +150,7 @@ class GraphCollectionViewLayout: UICollectionViewLayout {
         
 
         // Randomize Parameters
-        var circleRadius:CGFloat = 140
+        var circleRadius:CGFloat = 132
         let rangeRadius:CGFloat = 0
         let spreadVariation:Int = 1
         
@@ -205,13 +205,13 @@ class GraphCollectionViewLayout: UICollectionViewLayout {
         attributes.zIndex = 0
         
         
-        attributes.alpha = 0.62 - (CGFloat(ip.item)/CGFloat(backgroundRowsQtd))*0.04
+        attributes.alpha = 0.52 - (CGFloat(ip.item)/CGFloat(backgroundRowsQtd))*0.04
         // Randomize Parameters
-        var circleRadius:CGFloat = 242 + (CGFloat(rowNumber)*42)
+        var circleRadius:CGFloat = 282 + (CGFloat(rowNumber)*60)
         let rangeRadius:CGFloat = 0
         let spreadVariation:Int = 2
         
-        let point = spreadCirclePosition(CGFloat(rowNumber)*CGFloat(M_PI_4/2), number: cellCount, of: backgroundRowsQtd, radius: circleRadius, range: rangeRadius, variation: spreadVariation)
+        let point = spreadCirclePosition(CGFloat(rowNumber)*CGFloat(M_PI_4/4), number: cellCount, of: backgroundRowsQtd, radius: circleRadius, range: rangeRadius, variation: spreadVariation)
         
         attributes.center = point
         
