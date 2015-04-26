@@ -13,6 +13,7 @@
         <attribute name="appName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="available" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="backgroundImageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="developer" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Person" inverseName="myApps" inverseEntity="Person" syncable="YES"/>
         <relationship name="images" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Image" syncable="YES"/>
     </entity>
@@ -66,12 +67,12 @@
     <fetchRequest name="PersonTxai" entity="Person" predicateString="firstName == &quot;Txai&quot; AND lastName == &quot;Wieser&quot;" fetchLimit="1" includeSubentities="YES" includePropertyValues="YES"/>
     <elements>
         <element name="Achievement" positionX="-198" positionY="135" width="128" height="105"/>
-        <element name="App" positionX="-288" positionY="560" width="128" height="165"/>
+        <element name="App" positionX="-288" positionY="560" width="128" height="180"/>
+        <element name="EducationalEvent" positionX="-198" positionY="135" width="128" height="105"/>
         <element name="Event" positionX="-54" positionY="36" width="128" height="150"/>
         <element name="ExtraInfo" positionX="-189" positionY="144" width="128" height="105"/>
         <element name="Image" positionX="-189" positionY="144" width="128" height="60"/>
         <element name="Person" positionX="-342" positionY="-15" width="128" height="270"/>
         <element name="ScreenInfo" positionX="-198" positionY="135" width="128" height="105"/>
-        <element name="EducationalEvent" positionX="-198" positionY="135" width="128" height="105"/>
     </elements>
 </model>

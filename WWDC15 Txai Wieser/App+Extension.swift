@@ -21,4 +21,10 @@ extension App {
         var items = self.mutableSetValueForKey("images");
         items.addObject(value)
     }
+    
+    func orderedImagesArray() -> [Image] {
+        let array = Array(images) as! [Image]
+        return sorted(array){ $0.imgName < $1.imgName }
+    }
+    
 }

@@ -8,35 +8,44 @@
 
 import UIKit
 
-class WebViewController: UIViewController {
+class WebViewController: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var webview: UIWebView!
     var link:String? {
         didSet {
-            if let l = link, let url = NSURL(string: l) {
-                if self.webview != nil {
-                    self.webview.loadRequest(NSURLRequest(URL: url))
-                }
+            if let l = link {
+                load(l)
             }
         }
     }
-    
+    func load(var link:String) {
+//        self.webview?.layer.removeAllAnimations()
+//        self.webview?.scrollView.contentOffset = CGPointZero
+        if !link.hasPrefix("http") { link = "http://" + link }
+        if let url = NSURL(string: link) {
+            if self.webview != nil {
+                let rq = NSURLRequest(URL: url)
+                self.webview.loadRequest(rq)
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        webview.delegate = self
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(animated: Bool) {
-        if let l = link, let url = NSURL(string: l) {
-            self.webview.loadRequest(NSURLRequest(URL: url))
+        if let l = link {
+            load(l)
         }
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
+//    func webViewDidFinishLoad(webView: UIWebView) {
+//        let bottomOffset = CGPoint(x: 0, y: webView.scrollView.contentSize.height - webView.scrollView.bounds.size.height)
+//        UIView.animateWithDuration(18, delay: 2, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+//            webView.scrollView.contentOffset = bottomOffset
+//        }, completion: nil)
+//    }
     /*
     // MARK: - Navigation
 

@@ -44,7 +44,7 @@ class AppDetailTableViewController: UITableViewController {
 
         self.tableView.tableFooterView = UIView()
     }
-    
+
     override func viewWillAppear(animated: Bool) {
         if let p = app {
             updateDetailsOn(p)
@@ -72,10 +72,17 @@ class AppDetailTableViewController: UITableViewController {
     }
     
     func updateAppleTV(p:App) {
-        let appleTVInterface = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AppleTVImageViewer") as! ImageViewerViewController
-        let array = Array(p.images) as! [Image]
-        appleTVInterface.imagesName = array.map { $0.imgName }
+        if p.videoName != "" {
+            let appleTVInterface = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AppleTVMoviePlayer") as! MovieViewController
+            appleTVInterface.playVideo(p.videoName)
             AppDelegate.$.currentAppleTVViewController = appleTVInterface
+        }
+        else {
+            let appleTVInterface = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AppleTVImageViewer") as! ImageViewerViewController
+            let array = Array(p.orderedImagesArray())
+            appleTVInterface.imagesName = array.map { $0.imgName }
+            AppDelegate.$.currentAppleTVViewController = appleTVInterface
+        }
     }
     
     @IBAction func downloadOnAppStore(sender: UIButton) {

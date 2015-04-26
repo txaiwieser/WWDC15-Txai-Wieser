@@ -72,6 +72,9 @@
 		E9DA08271AE725B50078AF48 /* TreesGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA080F1AE725B50078AF48 /* TreesGameScene.swift */; };
 		E9DA08281AE725B50078AF48 /* VeinsGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA08101AE725B50078AF48 /* VeinsGameScene.swift */; };
 		E9DA082A1AE725B50078AF48 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA08121AE725B50078AF48 /* WebViewController.swift */; };
+		E9F092031AEC8F870062A52C /* repel_video_promo_v05.mov in Resources */ = {isa = PBXBuildFile; fileRef = E9F092021AEC8F870062A52C /* repel_video_promo_v05.mov */; };
+		E9F092051AEC9B830062A52C /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F092041AEC9B830062A52C /* MovieViewController.swift */; };
+		E9F092081AECB5BC0062A52C /* ballphy_video_demo_v01.mov in Resources */ = {isa = PBXBuildFile; fileRef = E9F092071AECB5BC0062A52C /* ballphy_video_demo_v01.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +158,9 @@
 		E9DA080F1AE725B50078AF48 /* TreesGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreesGameScene.swift; sourceTree = "<group>"; };
 		E9DA08101AE725B50078AF48 /* VeinsGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VeinsGameScene.swift; sourceTree = "<group>"; };
 		E9DA08121AE725B50078AF48 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		E9F092021AEC8F870062A52C /* repel_video_promo_v05.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = repel_video_promo_v05.mov; sourceTree = "<group>"; };
+		E9F092041AEC9B830062A52C /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		E9F092071AECB5BC0062A52C /* ballphy_video_demo_v01.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ballphy_video_demo_v01.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +316,8 @@
 		E97359FF1AE7296300795EAE /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				E9F092021AEC8F870062A52C /* repel_video_promo_v05.mov */,
+				E9F092071AECB5BC0062A52C /* ballphy_video_demo_v01.mov */,
 				E9665F7E1AE722E700302714 /* Main.storyboard */,
 				E9665F811AE722E700302714 /* Images.xcassets */,
 				E9665F831AE722E700302714 /* LaunchScreen.xib */,
@@ -347,6 +355,7 @@
 				E9DA07FB1AE725B50078AF48 /* ImageViewerViewController.swift */,
 				E9DA07FF1AE725B50078AF48 /* MapViewController.swift */,
 				E9DA08121AE725B50078AF48 /* WebViewController.swift */,
+				E9F092041AEC9B830062A52C /* MovieViewController.swift */,
 				E956BA641AEBA13D007C1F58 /* AppleTVLifeGraphMatchingViewController.swift */,
 				E9DA07DF1AE725A70078AF48 /* ExperimentsAppleTVViewController.swift */,
 			);
@@ -476,6 +485,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9665F801AE722E700302714 /* Main.storyboard in Resources */,
+				E9F092031AEC8F870062A52C /* repel_video_promo_v05.mov in Resources */,
+				E9F092081AECB5BC0062A52C /* ballphy_video_demo_v01.mov in Resources */,
 				E9665F851AE722E700302714 /* LaunchScreen.xib in Resources */,
 				E9665F821AE722E700302714 /* Images.xcassets in Resources */,
 			);
@@ -502,6 +513,7 @@
 				E9DA07EA1AE725A70078AF48 /* CGPoint+Extensions.swift in Sources */,
 				E9DA08251AE725B50078AF48 /* TextTableViewCell.swift in Sources */,
 				E9DA08151AE725B50078AF48 /* Int+Extensions.swift in Sources */,
+				E9F092051AEC9B830062A52C /* MovieViewController.swift in Sources */,
 				E9DA07ED1AE725A70078AF48 /* CoreDataManager.swift in Sources */,
 				E98ECCFB1AE9CC9F007D1036 /* BluredViewController.swift in Sources */,
 				E9DA07D21AE725970078AF48 /* AppDelegate+AppleTV.swift in Sources */,

@@ -75,6 +75,7 @@ class SocialViewController: UIViewController, UITableViewDataSource, UITableView
         case 0:
             cell.icon.image = UIImage(named: "website")
             cell.label.text = website
+            cell.selected = true
         case 1:
             cell.icon.image = UIImage(named: "email")
             cell.label.text = email

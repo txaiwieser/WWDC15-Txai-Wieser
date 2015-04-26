@@ -16,9 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     var window: UIWindow?
     var externalWindow:UIWindow?
+    
     var currentAppleTVViewController:UIViewController? {
         didSet {
-            presentCurrentVC()
+            if let ext = externalWindow {
+                presentCurrentVC(ext)
+            }
+            else {
+                currentAppleTVViewController = nil
+            }
+            
         }
     }
     
@@ -28,6 +35,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CoreDataManager()
         checkAppleTVConnection()
         addScreenObservers()
+        
+        let agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.6 Safari/537.11"
+        var dictionary = ["UserAgent": agent]
+        NSUserDefaults.standardUserDefaults().registerDefaults(dictionary)
         return true
     }
 

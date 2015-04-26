@@ -48,22 +48,15 @@ class CoreDataManager {
     func registerApps(p:Person) -> [App] {
         // Apps
         let app1 = App.newInstance()
-        app1.appName = "REPEL"
+        app1.appName = "Repel"
         app1.appIconName = "repel_appIcon"
         app1.backgroundImageName = "repel_background"
-        app1.appID = "00000000000000000" // Warning: Replace
-        app1.available = false
-        app1.appDescription = "REPEL is a game based on physics concepts. The purpose of the game is to solve puzzles, interacting with the characters and finding out the abilities they have.\n The objective of REPEL is to entertain and gradually establish a relation between the game and the physics concepts.\n So while playing and having fun, the player learns and also gets motivated to understand more about the concepts of the game.\n Find more about this challenging game that was hidden upon the universe of physics.\n The idea behind REPEL is to present some of the basic elementary physics concepts to the player while he is enjoying a challenging puzzle.\n Learning to play and playing to learn."
+        app1.appID = "914081825"
+        app1.available = true
+        app1.videoName = "repel_video_promo_v05"
+        app1.appDescription = "Repel is a game based on physics concepts. The purpose of the game is to solve puzzles, interacting with the characters and finding out the abilities they have.\n\nThe objective of Repel is to entertain and gradually establish a relation between the game and the physics concepts.\n\nSo while playing and having fun, the player learns and also gets motivated to understand more about the concepts of the game.\n\nFind more about this challenging game that was hidden upon the universe of physics.\n\nThe idea behind Repel is to present some of the basic elementary physics concepts to the player while he is enjoying a challenging puzzle.\n\nLearning to play and playing to learn."
         
-        
-        let app1img = Image.newInstance()
-        app1img.imgName = "repel_img1"
-        app1.addImage(app1img)
-        
-        let app2img = Image.newInstance()
-        app2img.imgName = "repel_background"
-        app1.addImage(app2img)
-        
+
         
         let app2 = App.newInstance()
         app2.appName = "Recolorindo o Reino"
@@ -71,7 +64,20 @@ class CoreDataManager {
         app2.backgroundImageName = "recolorindo_background"
         app2.appID = "00000000000000000" // Warning: Replace
         app2.available = false
-        app2.appDescription = "Painting the Kingdom is a game that aims to bring a different experience to the kids in addition to the educational resources that others children's games have.\n Paining the Kingdom brings a rich experience, encouraging players to interact with the outside world to complete challenges of the game."
+        app2.videoName = ""
+        app2.appDescription = "Recolorindo o Reino (Painting the Kingdom) provides a different gaming experience to the kids.\n\nBeyond the education system, it encourages players to interact with the outside world to complete challenges of the game.\n\nThe idea I had when I created this game was what I could do to encourage children to not stand still to have fun with their devices.\n\nIt uses sensors, such as the device camera, to capture real-world information and merge them in the game."
+        
+        let app2img1 = Image.newInstance()
+        app2img1.imgName = "recolorindo_image1"
+        app2.addImage(app2img1)
+        
+        let app2img2 = Image.newInstance()
+        app2img2.imgName = "recolorindo_image2"
+        app2.addImage(app2img2)
+        
+        let app2img3 = Image.newInstance()
+        app2img3.imgName = "recolorindo_image3"
+        app2.addImage(app2img3)
         
         
         
@@ -82,11 +88,9 @@ class CoreDataManager {
         app3.backgroundImageName = "ballphy_background"
         app3.appID = "00000000000000000" // Warning: Replace
         app3.available = false
-        app3.appDescription = "Through play, users learn about how the events of the real world can be explained with physical laws. As they play, users have fun, solve problems, and can even learn basic physics.\n After playing this game, users will be able to relate some of the game challenges with the real world events, and with that it will be easy to master the environment understanding."
-        
-        
-        
-        
+        app3.videoName = "ballphy_video_demo_v01"
+        app3.appDescription = "The idea behind Balphy is to present some of the basic elementary mechanical physics concepts to the player while he is enjoying a challenging puzzle.\n\n\"Gaming is fun. And learning could be fun too!\"\n\nThrough play, users learn about how the events of the real world happen, and as they play, they solve physics related problems.\n\nAfter playing this game, players will be able to relate some of the game challenges with the real world events, and with that it will be easy to master the environment understanding."
+
         
         let app4 = App.newInstance()
         app4.appName = "Shapes"
@@ -94,7 +98,17 @@ class CoreDataManager {
         app4.backgroundImageName = "shapes_background"
         app4.appID = "00000000000000000" // Warning: Replace
         app4.available = false
-        app4.appDescription = "Shapes is a game for children learning to geometric shapes. Its a challenging game that has leaderboards."
+        app4.videoName = ""
+        app4.appDescription = "Shapes is a simple game that I'm creating with my younger brother, in order to encourage him to learn a programming language (Swift) and improove his design skills while we have fun.\n\nIn this game geometric shapes go down on the screen and the player must turn a crown where there are molded shapes, the range that shapes appear decreases and the goal is to fit a maximum of shapes in place subsequently."
+        
+        let app4img1 = Image.newInstance()
+        app4img1.imgName = "shapes_image1"
+        app4.addImage(app4img1)
+        
+        let app4img2 = Image.newInstance()
+        app4img2.imgName = "shapes_image2"
+        app4.addImage(app4img2)
+        
         
         app1.developer = p; app2.developer = p; app3.developer = p; app4.developer = p
         return [app1, app2, app3, app4]
@@ -111,12 +125,13 @@ class CoreDataManager {
         let ach2 = Achievement.newInstance()
         ach2.name = "Professional Background"
         ach2.iconName = "professional_icon"
-        ach2.longDescription = "TextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCell. TextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCell. \n\n\nTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCell"
+        ach2.longDescription = "I started helping people with computers and electronic devices when I was little, and by the time I was in college it already was like a part-time job for me.\n\nWhen I started my first adventures with web programming I started doing some work for friends and acquaintances. Just when I went to college I started working on PET's Intelligent Robotics Laboratory, programming in C, playing with Arduinos, Microcontrollers, Lego Mindstorms and a Rubik's Cube robot assembler.\n\nAfter more than a year working there, BEPiD began and I started to work on my own projects."
         
         let ach3 = Achievement.newInstance()
         ach3.name = "Technical Skills"
         ach3.iconName = "skills_icon"
-        ach3.longDescription = "TextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCell. TextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCell. \n\n\nTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCell"
+        ach3.longDescription = "My skills related to mobile development are:\n\nProgramming Languages:\n   - Swift\n   - Objective-C\n   - C\n   - Java\n\nDesign:\n   - Sketch\n   - Photoshop\n   - After Effects\n   - 3DS Max\n"
+        
         
         let ach4 = Achievement.newInstance()
         ach4.name = "Interests"

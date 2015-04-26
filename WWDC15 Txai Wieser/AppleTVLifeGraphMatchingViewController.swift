@@ -13,8 +13,7 @@ class AppleTVLifeGraphMatchingViewController: UIViewController {
     @IBOutlet var iconsImageViews: [UIImageView]!
     
     var iconImageNames:[String]? {
-        didSet { reloadIcons() }
-    }
+        didSet { if isViewLoaded() { reloadIcons() } } }
     var selectedIndex:Int = 0 {
         didSet {
             if selectedIndex < iconsImageViews.count {

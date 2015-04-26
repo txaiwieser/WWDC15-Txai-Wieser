@@ -16,6 +16,7 @@ class App: NSManagedObject {
     @NSManaged var appIconName: String
     @NSManaged var appID: String
     @NSManaged var appName: String
+    @NSManaged var videoName: String
     @NSManaged var available: Bool
     @NSManaged var backgroundImageName: String
     @NSManaged var developer: Person

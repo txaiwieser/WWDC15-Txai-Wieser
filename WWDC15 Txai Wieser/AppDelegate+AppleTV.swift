@@ -11,14 +11,15 @@ import UIKit
 extension AppDelegate {
     // MARK: - Apple TV
     
-    func presentCurrentVC() {
-        if let ew = externalWindow, let vc = currentAppleTVViewController {
+    func presentCurrentVC(ew:UIWindow) {
+        if let vc = currentAppleTVViewController {
             vc.view.frame = ew.frame
             UIView.transitionWithView(ew, duration: 0.8, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
                 ew.rootViewController = vc
             }, completion: nil)
         }
     }
+    
     func checkAppleTVConnection() {
         let screens = UIScreen.screens()
         let screenCount = screens.count
@@ -45,7 +46,7 @@ extension AppDelegate {
             
             self.externalWindow!.makeKeyAndVisible()
             if let vc = currentAppleTVViewController {
-                presentCurrentVC()
+                presentCurrentVC(self.externalWindow!)
             }
             else {
                 self.currentAppleTVViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AppleTVRootViewController") as? UIViewController
