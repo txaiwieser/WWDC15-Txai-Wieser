@@ -314,7 +314,7 @@ class CoreDataManager {
         ei8.name = "Music"
         ei8.iconName = "music_icon"
         ei8.segueID = ""
-        ei8.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
+        ei8.about = "Music is part of my life! I'm always listening to good music!\n\nI play the piano and that's one of the things I like the most and that make feel great!\n\nI'm really inspired by music!"
         
         return [ei1, ei2, ei3, ei4, ei5, ei6, ei7, ei8]
     }
