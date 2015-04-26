@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             else {
                 currentAppleTVViewController = nil
             }
-            
         }
     }
     

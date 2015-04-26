@@ -202,12 +202,12 @@ class CoreDataManager {
         
         
         let ev4 = Event.newInstance()
-        ev4.name = "BEPiD"
+        ev4.name = "iOS"
         ev4.iconName = "iphone_icon"
-        ev4.smallDescription = "WOW"
-        ev4.longDescription1 = "Such great"
-        ev4.longDescription2 = ":p"
-        ev4.longDescription3 = "hehehe"
+        ev4.smallDescription = "iOS Development"
+        ev4.longDescription1 = "Since I began studying iOS, I've been attending classes, reading, doing research and attending to conferences to be always up-to-date with all major frameworks available."
+        ev4.longDescription2 = "This year in addition to be helping new students at BEPiD I had the opportunity to talk about memory management in Swift at CocoaHeadsBR-POA. It was an amazing experience!"
+        ev4.longDescription3 = "Some of the main frameworks I worked with are:\n\n- SpriteKit\n\n- SceneKit\n\n- App Extensions\n\n- Touch ID\n\n- MapKit\n\n- And all major UIKit components"
         
         ev1.from = p; ev2.from = p; ev3.from = p; ev4.from = p
         return [ev1, ev2, ev3, ev4]
@@ -235,7 +235,7 @@ class CoreDataManager {
         let si4 = ScreenInfo.newInstance()
         si4.order = 4
         si4.iconName = "computer_icon"
-        si4.text = "I was not yet completely satisfied. My interest in computers made me continue studying to get into a university. Then I started Computer Engineering at UFRGS!"
+        si4.text = "I was not yet completely satisfied. My interest in computers made me continue studying to get into a university. I started Computer Engineering at UFRGS!"
         
         let si5 = ScreenInfo.newInstance()
         si5.order = 5
@@ -245,7 +245,7 @@ class CoreDataManager {
         let si6 = ScreenInfo.newInstance()
         si6.order = 6
         si6.iconName = "education_icon"
-        si6.text = "Just after I started the course from Stanford on iTunes I found out that there would be an iOS course in town I lived. I knew this was an extremely rare and an incredible opportunity! I just thought: \"I need to be chosen.\""
+        si6.text = "Just after I started the course from Stanford on iTunes I found out that there would be an iOS course in the town I lived. I knew this was extremely rare and an incredible opportunity! I just thought: \"I need to be chosen.\""
         
         
         let si7 = ScreenInfo.newInstance()
@@ -266,29 +266,29 @@ class CoreDataManager {
     func registerExtraInfo(p:Person) -> [ExtraInfo] {
         // Achievement
         let ei1 = ExtraInfo.newInstance()
-        ei1.name = "Veins"
+        ei1.name = "Random Paths"
         ei1.iconName = "veins_icon"
         ei1.segueID = "ExperimentsSegue"
-        ei1.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
+        ei1.about = "I like algorithms and random paths and to simulate real things in computers.\n\nSoon after the Swift was announced I started to do some tests using SriteKit! This is one of them!\n\nThe main artery follows random paths and suddenly splits into many other mini-arteries."
         
         let ei2 = ExtraInfo.newInstance()
         ei2.name = "Trees"
         ei2.iconName = "trees_icon"
         ei2.segueID = "ExperimentsSegue"
-        ei2.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
+        ei2.about = "I like algorithms and random paths and to simulate real things in computers.\n\nSoon after the Swift was announced I started to do some tests using SriteKit! This is one of them!\n\nA simple node-based tree that has many randomized parameters for a more realistic result!"
 
         let ei3 = ExtraInfo.newInstance()
-        ei3.name = "Swift"
+        ei3.name = "Swift <3"
         ei3.iconName = "swift_icon"
         ei3.segueID = ""
-        ei3.about = "Swift blab balbalbalor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
+        ei3.about = "When I was watching the WWDC14 stream and Swift was announced I was shocked. I loved Objective-C, and with swift everything I had learned would become useless.\n\nBut I was wrong, and after I started testing I was liking more and more the language! Today when I have to program in Objective-C again I see how much I love this new language and its incredible features!"
 
         
         let ei4 = ExtraInfo.newInstance()
         ei4.name = "Brazil"
         ei4.iconName = "brazil_icon"
         ei4.segueID = ""
-        ei4.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
+        ei4.about = "I love my country!\n\nI live in Porto Alegre - RS, in the southernmost part of Brazil!"
 
         
         let ei5 = ExtraInfo.newInstance()
@@ -301,13 +301,13 @@ class CoreDataManager {
         ei6.name = "Drones"
         ei6.iconName = "drone_icon"
         ei6.segueID = ""
-        ei6.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
+        ei6.about = "For some time I had been admiring and researching about drones. And in the last vacation college I built one from scratch.I chose an hexacopter, and even created the mechanical part of the project!\n\nIt was an amazing experience and I plan to build a another version in the future!"
         
         let ei7 = ExtraInfo.newInstance()
         ei7.name = "Sports"
         ei7.iconName = "windsurf_icon"
         ei7.segueID = ""
-        ei7.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
+        ei7.about = "Besides the technological stuff I also like sports, especially water sports.\n\nI love Windsurfing!\n\nI practice Windsurf in partnership with my father and cousins!"
         
         
         let ei8 = ExtraInfo.newInstance()

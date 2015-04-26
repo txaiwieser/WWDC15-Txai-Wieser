@@ -36,7 +36,7 @@ class ExperimentsiOSViewController: BluredViewController {
 
     func updateAppleTV(xp:ExtraInfo) {
         let appleTVInterface = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AppleTVViewController") as! ExperimentsAppleTVViewController
-        if xp.name == "Veins" {
+        if xp.name == "Random Paths" {
             appleTVInterface.experiment = 2
         }
         else {
