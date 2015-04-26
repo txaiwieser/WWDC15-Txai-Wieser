@@ -10,7 +10,6 @@ import UIKit
 
 class InfoViewController: BluredViewController {
 
-    @IBOutlet weak var text1: UILabel!
     @IBOutlet weak var icon: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +20,7 @@ class InfoViewController: BluredViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         icon.image = icon.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-        icon.tintColor = text1.textColor
+        icon.tintColor = self.view.tintColor
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

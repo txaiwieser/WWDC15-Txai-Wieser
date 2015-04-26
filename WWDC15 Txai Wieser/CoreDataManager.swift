@@ -127,6 +127,7 @@ class CoreDataManager {
         ach2.iconName = "professional_icon"
         ach2.longDescription = "I started helping people with computers and electronic devices when I was little, and by the time I was in college it already was like a part-time job for me.\n\nWhen I started my first adventures with web programming I started doing some work for friends and acquaintances. Just when I went to college I started working on PET's Intelligent Robotics Laboratory, programming in C, playing with Arduinos, Microcontrollers, Lego Mindstorms and a Rubik's Cube robot assembler.\n\nAfter more than a year working there, BEPiD began and I started to work on my own projects."
         
+        
         let ach3 = Achievement.newInstance()
         ach3.name = "Technical Skills"
         ach3.iconName = "skills_icon"
@@ -136,7 +137,7 @@ class CoreDataManager {
         let ach4 = Achievement.newInstance()
         ach4.name = "Interests"
         ach4.iconName = "interests_icon"
-        ach4.longDescription = "TextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCell. TextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCell. \n\n\nTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCellTextTableViewCell"
+        ach4.longDescription = "I generally am very interested in education, so I try to apply it in other things I like, such as applications and games with new ways of interaction!\n\nAlso, I really like electronics and physical objects embedded with electronics, software, sensors and connectivity."
         
         
         ach1.from = p; ach2.from = p; ach3.from = p; ach4.from = p

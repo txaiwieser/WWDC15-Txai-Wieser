@@ -107,11 +107,11 @@ class LifeEventDetailViewController: BluredViewController, UITableViewDataSource
             let c = (cell as! TextTableViewCell)
             switch indexPath.row {
             case 2:
-                c.label?.text = "\n" + event!.longDescription3!
+                c.textView?.text = event!.longDescription3!
             case 1:
-                c.label?.text = "\n" + event!.longDescription2! + "\n"
+                c.textView?.text = event!.longDescription2!
             default:
-                c.label?.text = event!.longDescription1! + "\n"
+                c.textView?.text = event!.longDescription1!
             }
         }
         return cell

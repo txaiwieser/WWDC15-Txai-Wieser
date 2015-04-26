@@ -1,9 +1,9 @@
 //
 //  Image.swift
-//  WWDC 2015 - Txai Wieser
+//  WWDC15 Txai Wieser
 //
-//  Created by Txai Wieser on 19/04/15.
-//  Copyright (c) 2015 Txai Wieser. All rights reserved.
+//  Created by Txai Wieser on 26/04/15.
+//  Copyright (c) 2015 TDW. All rights reserved.
 //
 
 import Foundation
@@ -13,5 +13,7 @@ import CoreData
 class Image: NSManagedObject {
 
     @NSManaged var imgName: String
+    @NSManaged var fromApp: App
+    @NSManaged var fromScreen: ScreenInfo
 
 }

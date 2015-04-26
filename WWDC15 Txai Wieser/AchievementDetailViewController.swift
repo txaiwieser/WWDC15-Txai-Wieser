@@ -83,7 +83,7 @@ class AchievementDetailViewController: BluredViewController, UITableViewDataSour
             default:
                 cell = tableView.dequeueReusableCellWithIdentifier("textCell") as! TextTableViewCell
                 let c = (cell as! TextTableViewCell)
-                c.label?.text = achievement!.longDescription
+                c.textView?.text = achievement!.longDescription
             }
         default:
             cell = tableView.dequeueReusableCellWithIdentifier("textCell") as! TextTableViewCell

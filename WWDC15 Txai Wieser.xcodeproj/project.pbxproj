@@ -10,8 +10,6 @@
 		E9402DCF1AE7D29400F926BB /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9402DCE1AE7D29400F926BB /* ContactTableViewCell.swift */; };
 		E956BA571AEA83F5007C1F58 /* JobsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956BA561AEA83F5007C1F58 /* JobsTableViewCell.swift */; };
 		E956BA591AEA84B5007C1F58 /* AchievementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956BA581AEA84B5007C1F58 /* AchievementDetailViewController.swift */; };
-		E956BA5B1AEA85F6007C1F58 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956BA5A1AEA85F6007C1F58 /* Person.swift */; };
-		E956BA5D1AEA85F7007C1F58 /* EducationalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956BA5C1AEA85F7007C1F58 /* EducationalEvent.swift */; };
 		E956BA5F1AEA861F007C1F58 /* EducationalEvent+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956BA5E1AEA861F007C1F58 /* EducationalEvent+Extension.swift */; };
 		E956BA611AEA9E83007C1F58 /* ExtraInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956BA601AEA9E83007C1F58 /* ExtraInfoViewController.swift */; };
 		E956BA631AEB0679007C1F58 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956BA621AEB0679007C1F58 /* UIColor+Extension.swift */; };
@@ -24,11 +22,16 @@
 		E9665F911AE722E700302714 /* WWDC15_Txai_WieserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9665F901AE722E700302714 /* WWDC15_Txai_WieserTests.swift */; };
 		E98ECCF51AE97035007D1036 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98ECCF41AE97035007D1036 /* InfoViewController.swift */; };
 		E98ECCFB1AE9CC9F007D1036 /* BluredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98ECCFA1AE9CC9F007D1036 /* BluredViewController.swift */; };
-		E98ECCFD1AE9F0E3007D1036 /* ExtraInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98ECCFC1AE9F0E3007D1036 /* ExtraInfo.swift */; };
-		E9DA07CC1AE725970078AF48 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07C21AE725970078AF48 /* Achievement.swift */; };
+		E99E19511AED5185001BABB4 /* ExtraInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E19501AED5185001BABB4 /* ExtraInfo.swift */; };
+		E99E19531AED5185001BABB4 /* EducationalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E19521AED5185001BABB4 /* EducationalEvent.swift */; };
+		E99E19551AED5185001BABB4 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E19541AED5185001BABB4 /* Person.swift */; };
+		E99E19571AED5186001BABB4 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E19561AED5186001BABB4 /* Achievement.swift */; };
+		E99E19591AED5186001BABB4 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E19581AED5186001BABB4 /* App.swift */; };
+		E99E195B1AED5186001BABB4 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E195A1AED5186001BABB4 /* Event.swift */; };
+		E99E195D1AED5186001BABB4 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E195C1AED5186001BABB4 /* Image.swift */; };
+		E99E195F1AED5186001BABB4 /* ScreenInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99E195E1AED5186001BABB4 /* ScreenInfo.swift */; };
 		E9DA07CD1AE725970078AF48 /* Achievement+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07C31AE725970078AF48 /* Achievement+Extension.swift */; };
 		E9DA07CE1AE725970078AF48 /* AchievementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07C41AE725970078AF48 /* AchievementCollectionViewCell.swift */; };
-		E9DA07D01AE725970078AF48 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07C61AE725970078AF48 /* App.swift */; };
 		E9DA07D11AE725970078AF48 /* App+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07C71AE725970078AF48 /* App+Extension.swift */; };
 		E9DA07D21AE725970078AF48 /* AppDelegate+AppleTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07C81AE725970078AF48 /* AppDelegate+AppleTV.swift */; };
 		E9DA07D31AE725970078AF48 /* AppDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07C91AE725970078AF48 /* AppDetailTableViewController.swift */; };
@@ -40,7 +43,6 @@
 		E9DA07EC1AE725A70078AF48 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07DA1AE725A70078AF48 /* ColorPalette.swift */; };
 		E9DA07ED1AE725A70078AF48 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07DB1AE725A70078AF48 /* CoreDataManager.swift */; };
 		E9DA07EE1AE725A70078AF48 /* DissmissModalSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07DC1AE725A70078AF48 /* DissmissModalSegue.swift */; };
-		E9DA07EF1AE725A70078AF48 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07DD1AE725A70078AF48 /* Event.swift */; };
 		E9DA07F01AE725A70078AF48 /* Event+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07DE1AE725A70078AF48 /* Event+Extension.swift */; };
 		E9DA07F11AE725A70078AF48 /* ExperimentsAppleTVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07DF1AE725A70078AF48 /* ExperimentsAppleTVViewController.swift */; };
 		E9DA07F21AE725A70078AF48 /* ExperimentsiOSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07E01AE725A70078AF48 /* ExperimentsiOSViewController.swift */; };
@@ -48,7 +50,6 @@
 		E9DA07F51AE725A70078AF48 /* ExtrasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07E31AE725A70078AF48 /* ExtrasCollectionViewCell.swift */; };
 		E9DA07F61AE725A70078AF48 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07E41AE725A70078AF48 /* GradientView.swift */; };
 		E9DA07F71AE725A70078AF48 /* GraphCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07E51AE725A70078AF48 /* GraphCollectionViewLayout.swift */; };
-		E9DA07F81AE725A70078AF48 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07E61AE725A70078AF48 /* Image.swift */; };
 		E9DA07F91AE725A70078AF48 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07E71AE725A70078AF48 /* Image+Extension.swift */; };
 		E9DA08131AE725B50078AF48 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07FA1AE725B50078AF48 /* ImageTableViewCell.swift */; };
 		E9DA08141AE725B50078AF48 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA07FB1AE725B50078AF48 /* ImageViewerViewController.swift */; };
@@ -63,7 +64,6 @@
 		E9DA081E1AE725B50078AF48 /* PersonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA08051AE725B50078AF48 /* PersonCollectionViewCell.swift */; };
 		E9DA081F1AE725B50078AF48 /* PersonDetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA08061AE725B50078AF48 /* PersonDetailPageViewController.swift */; };
 		E9DA08201AE725B50078AF48 /* PersonPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA08071AE725B50078AF48 /* PersonPageViewController.swift */; };
-		E9DA08211AE725B50078AF48 /* ScreenInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA08081AE725B50078AF48 /* ScreenInfo.swift */; };
 		E9DA08221AE725B50078AF48 /* ScreenInfo+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA08091AE725B50078AF48 /* ScreenInfo+Extension.swift */; };
 		E9DA08231AE725B50078AF48 /* ShapeNodeDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA080A1AE725B50078AF48 /* ShapeNodeDrawer.swift */; };
 		E9DA08241AE725B50078AF48 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA080B1AE725B50078AF48 /* SocialViewController.swift */; };
@@ -91,8 +91,6 @@
 		E9402DCE1AE7D29400F926BB /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		E956BA561AEA83F5007C1F58 /* JobsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsTableViewCell.swift; sourceTree = "<group>"; };
 		E956BA581AEA84B5007C1F58 /* AchievementDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementDetailViewController.swift; sourceTree = "<group>"; };
-		E956BA5A1AEA85F6007C1F58 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		E956BA5C1AEA85F7007C1F58 /* EducationalEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationalEvent.swift; sourceTree = "<group>"; };
 		E956BA5E1AEA861F007C1F58 /* EducationalEvent+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EducationalEvent+Extension.swift"; sourceTree = "<group>"; };
 		E956BA601AEA9E83007C1F58 /* ExtraInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtraInfoViewController.swift; sourceTree = "<group>"; };
 		E956BA621AEB0679007C1F58 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -109,11 +107,16 @@
 		E9665F901AE722E700302714 /* WWDC15_Txai_WieserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC15_Txai_WieserTests.swift; sourceTree = "<group>"; };
 		E98ECCF41AE97035007D1036 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		E98ECCFA1AE9CC9F007D1036 /* BluredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluredViewController.swift; sourceTree = "<group>"; };
-		E98ECCFC1AE9F0E3007D1036 /* ExtraInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtraInfo.swift; sourceTree = "<group>"; };
-		E9DA07C21AE725970078AF48 /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		E99E19501AED5185001BABB4 /* ExtraInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtraInfo.swift; sourceTree = "<group>"; };
+		E99E19521AED5185001BABB4 /* EducationalEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationalEvent.swift; sourceTree = "<group>"; };
+		E99E19541AED5185001BABB4 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E99E19561AED5186001BABB4 /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		E99E19581AED5186001BABB4 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		E99E195A1AED5186001BABB4 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		E99E195C1AED5186001BABB4 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		E99E195E1AED5186001BABB4 /* ScreenInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenInfo.swift; sourceTree = "<group>"; };
 		E9DA07C31AE725970078AF48 /* Achievement+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Achievement+Extension.swift"; sourceTree = "<group>"; };
 		E9DA07C41AE725970078AF48 /* AchievementCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementCollectionViewCell.swift; sourceTree = "<group>"; };
-		E9DA07C61AE725970078AF48 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		E9DA07C71AE725970078AF48 /* App+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "App+Extension.swift"; sourceTree = "<group>"; };
 		E9DA07C81AE725970078AF48 /* AppDelegate+AppleTV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+AppleTV.swift"; sourceTree = "<group>"; };
 		E9DA07C91AE725970078AF48 /* AppDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailTableViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +128,6 @@
 		E9DA07DA1AE725A70078AF48 /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		E9DA07DB1AE725A70078AF48 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		E9DA07DC1AE725A70078AF48 /* DissmissModalSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DissmissModalSegue.swift; sourceTree = "<group>"; };
-		E9DA07DD1AE725A70078AF48 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		E9DA07DE1AE725A70078AF48 /* Event+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+Extension.swift"; sourceTree = "<group>"; };
 		E9DA07DF1AE725A70078AF48 /* ExperimentsAppleTVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentsAppleTVViewController.swift; sourceTree = "<group>"; };
 		E9DA07E01AE725A70078AF48 /* ExperimentsiOSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentsiOSViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +135,6 @@
 		E9DA07E31AE725A70078AF48 /* ExtrasCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtrasCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9DA07E41AE725A70078AF48 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		E9DA07E51AE725A70078AF48 /* GraphCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCollectionViewLayout.swift; sourceTree = "<group>"; };
-		E9DA07E61AE725A70078AF48 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		E9DA07E71AE725A70078AF48 /* Image+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 		E9DA07FA1AE725B50078AF48 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		E9DA07FB1AE725B50078AF48 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +149,6 @@
 		E9DA08051AE725B50078AF48 /* PersonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9DA08061AE725B50078AF48 /* PersonDetailPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailPageViewController.swift; sourceTree = "<group>"; };
 		E9DA08071AE725B50078AF48 /* PersonPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPageViewController.swift; sourceTree = "<group>"; };
-		E9DA08081AE725B50078AF48 /* ScreenInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenInfo.swift; sourceTree = "<group>"; };
 		E9DA08091AE725B50078AF48 /* ScreenInfo+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScreenInfo+Extension.swift"; sourceTree = "<group>"; };
 		E9DA080A1AE725B50078AF48 /* ShapeNodeDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeNodeDrawer.swift; sourceTree = "<group>"; };
 		E9DA080B1AE725B50078AF48 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
@@ -382,24 +382,24 @@
 		E9DA082B1AE726250078AF48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E956BA5C1AEA85F7007C1F58 /* EducationalEvent.swift */,
-				E956BA5A1AEA85F6007C1F58 /* Person.swift */,
 				E9665F791AE722E700302714 /* WWDC15_Txai_Wieser.xcdatamodeld */,
 				E9DA07DB1AE725A70078AF48 /* CoreDataManager.swift */,
-				E98ECCFC1AE9F0E3007D1036 /* ExtraInfo.swift */,
+				E99E195E1AED5186001BABB4 /* ScreenInfo.swift */,
+				E99E195C1AED5186001BABB4 /* Image.swift */,
+				E99E195A1AED5186001BABB4 /* Event.swift */,
+				E99E19581AED5186001BABB4 /* App.swift */,
+				E99E19561AED5186001BABB4 /* Achievement.swift */,
+				E99E19541AED5185001BABB4 /* Person.swift */,
+				E99E19521AED5185001BABB4 /* EducationalEvent.swift */,
+				E99E19501AED5185001BABB4 /* ExtraInfo.swift */,
+				E9DA08091AE725B50078AF48 /* ScreenInfo+Extension.swift */,
+				E9DA07E71AE725A70078AF48 /* Image+Extension.swift */,
+				E9DA07DE1AE725A70078AF48 /* Event+Extension.swift */,
+				E9DA07C71AE725970078AF48 /* App+Extension.swift */,
+				E9DA07C31AE725970078AF48 /* Achievement+Extension.swift */,
 				E9DA08041AE725B50078AF48 /* Person+Extension.swift */,
 				E956BA5E1AEA861F007C1F58 /* EducationalEvent+Extension.swift */,
-				E9DA07DD1AE725A70078AF48 /* Event.swift */,
-				E9DA07DE1AE725A70078AF48 /* Event+Extension.swift */,
 				E9DA07E21AE725A70078AF48 /* ExtraInfo+Extension.swift */,
-				E9DA07E61AE725A70078AF48 /* Image.swift */,
-				E9DA07E71AE725A70078AF48 /* Image+Extension.swift */,
-				E9DA07C61AE725970078AF48 /* App.swift */,
-				E9DA07C71AE725970078AF48 /* App+Extension.swift */,
-				E9DA08081AE725B50078AF48 /* ScreenInfo.swift */,
-				E9DA08091AE725B50078AF48 /* ScreenInfo+Extension.swift */,
-				E9DA07C21AE725970078AF48 /* Achievement.swift */,
-				E9DA07C31AE725970078AF48 /* Achievement+Extension.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -515,6 +515,7 @@
 				E9DA08151AE725B50078AF48 /* Int+Extensions.swift in Sources */,
 				E9F092051AEC9B830062A52C /* MovieViewController.swift in Sources */,
 				E9DA07ED1AE725A70078AF48 /* CoreDataManager.swift in Sources */,
+				E99E19591AED5186001BABB4 /* App.swift in Sources */,
 				E98ECCFB1AE9CC9F007D1036 /* BluredViewController.swift in Sources */,
 				E9DA07D21AE725970078AF48 /* AppDelegate+AppleTV.swift in Sources */,
 				E9DA07CD1AE725970078AF48 /* Achievement+Extension.swift in Sources */,
@@ -522,8 +523,8 @@
 				E9DA07F21AE725A70078AF48 /* ExperimentsiOSViewController.swift in Sources */,
 				E9DA07F11AE725A70078AF48 /* ExperimentsAppleTVViewController.swift in Sources */,
 				E9DA08201AE725B50078AF48 /* PersonPageViewController.swift in Sources */,
-				E9DA07CC1AE725970078AF48 /* Achievement.swift in Sources */,
 				E9DA07D11AE725970078AF48 /* App+Extension.swift in Sources */,
+				E99E19531AED5185001BABB4 /* EducationalEvent.swift in Sources */,
 				E9DA07D41AE725970078AF48 /* AppTableViewCell.swift in Sources */,
 				E9DA08161AE725B50078AF48 /* LifeEventCollectionViewCell.swift in Sources */,
 				E9DA08271AE725B50078AF48 /* TreesGameScene.swift in Sources */,
@@ -532,40 +533,39 @@
 				E9DA081E1AE725B50078AF48 /* PersonCollectionViewCell.swift in Sources */,
 				E956BA611AEA9E83007C1F58 /* ExtraInfoViewController.swift in Sources */,
 				E9DA07EB1AE725A70078AF48 /* CGSize+Extensions.swift in Sources */,
+				E99E195F1AED5186001BABB4 /* ScreenInfo.swift in Sources */,
 				E9DA082A1AE725B50078AF48 /* WebViewController.swift in Sources */,
 				E9DA08261AE725B50078AF48 /* TitleTableViewCell.swift in Sources */,
 				E9DA08141AE725B50078AF48 /* ImageViewerViewController.swift in Sources */,
 				E9DA07EE1AE725A70078AF48 /* DissmissModalSegue.swift in Sources */,
 				E9DA08281AE725B50078AF48 /* VeinsGameScene.swift in Sources */,
 				E9DA081D1AE725B50078AF48 /* Person+Extension.swift in Sources */,
+				E99E195D1AED5186001BABB4 /* Image.swift in Sources */,
 				E9DA07EC1AE725A70078AF48 /* ColorPalette.swift in Sources */,
 				E9DA08191AE725B50078AF48 /* MyLifeGraphViewController.swift in Sources */,
-				E9DA07D01AE725970078AF48 /* App.swift in Sources */,
 				E9DA08231AE725B50078AF48 /* ShapeNodeDrawer.swift in Sources */,
 				E9DA07F61AE725A70078AF48 /* GradientView.swift in Sources */,
 				E9DA08241AE725B50078AF48 /* SocialViewController.swift in Sources */,
-				E9DA07F81AE725A70078AF48 /* Image.swift in Sources */,
 				E9DA07F71AE725A70078AF48 /* GraphCollectionViewLayout.swift in Sources */,
+				E99E19511AED5185001BABB4 /* ExtraInfo.swift in Sources */,
+				E99E19551AED5185001BABB4 /* Person.swift in Sources */,
 				E956BA631AEB0679007C1F58 /* UIColor+Extension.swift in Sources */,
 				E9DA081F1AE725B50078AF48 /* PersonDetailPageViewController.swift in Sources */,
+				E99E195B1AED5186001BABB4 /* Event.swift in Sources */,
 				E98ECCF51AE97035007D1036 /* InfoViewController.swift in Sources */,
 				E956BA5F1AEA861F007C1F58 /* EducationalEvent+Extension.swift in Sources */,
 				E9DA07D51AE725970078AF48 /* BackgroundCollectionViewCell.swift in Sources */,
 				E9DA07D31AE725970078AF48 /* AppDetailTableViewController.swift in Sources */,
 				E9DA08181AE725B50078AF48 /* MapViewController.swift in Sources */,
+				E99E19571AED5186001BABB4 /* Achievement.swift in Sources */,
 				E9DA081B1AE725B50078AF48 /* OngoingVeinsManager.swift in Sources */,
 				E9DA081A1AE725B50078AF48 /* OngoingVein.swift in Sources */,
 				E956BA651AEBA13D007C1F58 /* AppleTVLifeGraphMatchingViewController.swift in Sources */,
 				E9DA07CE1AE725970078AF48 /* AchievementCollectionViewCell.swift in Sources */,
-				E956BA5B1AEA85F6007C1F58 /* Person.swift in Sources */,
-				E9DA08211AE725B50078AF48 /* ScreenInfo.swift in Sources */,
 				E9DA07F51AE725A70078AF48 /* ExtrasCollectionViewCell.swift in Sources */,
 				E9402DCF1AE7D29400F926BB /* ContactTableViewCell.swift in Sources */,
-				E98ECCFD1AE9F0E3007D1036 /* ExtraInfo.swift in Sources */,
 				E9DA08131AE725B50078AF48 /* ImageTableViewCell.swift in Sources */,
-				E9DA07EF1AE725A70078AF48 /* Event.swift in Sources */,
 				E9DA07F91AE725A70078AF48 /* Image+Extension.swift in Sources */,
-				E956BA5D1AEA85F7007C1F58 /* EducationalEvent.swift in Sources */,
 				E9DA07F41AE725A70078AF48 /* ExtraInfo+Extension.swift in Sources */,
 				E9665F7B1AE722E700302714 /* WWDC15_Txai_Wieser.xcdatamodeld in Sources */,
 			);

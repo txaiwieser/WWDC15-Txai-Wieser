@@ -15,13 +15,14 @@
         <attribute name="backgroundImageName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="videoName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="developer" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Person" inverseName="myApps" inverseEntity="Person" syncable="YES"/>
-        <relationship name="images" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Image" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Image" inverseName="fromApp" inverseEntity="Image" syncable="YES"/>
     </entity>
     <entity name="EducationalEvent" representedClassName="EducationalEvent" syncable="YES">
         <attribute name="about" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="from" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="educationalEvents" inverseEntity="Person" syncable="YES"/>
     </entity>
     <entity name="Event" representedClassName="Event" syncable="YES">
         <attribute name="iconName" optional="YES" attributeType="String" syncable="YES"/>
@@ -37,9 +38,12 @@
         <attribute name="iconName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="segueID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="from" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="extraInfos" inverseEntity="Person" syncable="YES"/>
     </entity>
     <entity name="Image" representedClassName="Image" syncable="YES">
         <attribute name="imgName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="fromApp" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="App" inverseName="images" inverseEntity="App" syncable="YES"/>
+        <relationship name="fromScreen" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ScreenInfo" inverseName="images" inverseEntity="ScreenInfo" syncable="YES"/>
     </entity>
     <entity name="Person" representedClassName="Person" syncable="YES">
         <attribute name="birthday" optional="YES" attributeType="Date" syncable="YES"/>
@@ -51,28 +55,29 @@
         <attribute name="profileImageName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="twitter" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="educationalEvents" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="EducationalEvent" syncable="YES"/>
-        <relationship name="extraInfos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ExtraInfo" syncable="YES"/>
+        <relationship name="educationalEvents" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="EducationalEvent" inverseName="from" inverseEntity="EducationalEvent" syncable="YES"/>
+        <relationship name="extraInfos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ExtraInfo" inverseName="from" inverseEntity="ExtraInfo" syncable="YES"/>
         <relationship name="lifeAchievements" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Achievement" inverseName="from" inverseEntity="Achievement" syncable="YES"/>
         <relationship name="lifeEvents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="from" inverseEntity="Event" syncable="YES"/>
         <relationship name="myApps" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="App" inverseName="developer" inverseEntity="App" syncable="YES"/>
-        <relationship name="screenInfos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ScreenInfo" syncable="YES"/>
+        <relationship name="screenInfos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ScreenInfo" inverseName="from" inverseEntity="ScreenInfo" syncable="YES"/>
     </entity>
     <entity name="ScreenInfo" representedClassName="ScreenInfo" syncable="YES">
         <attribute name="iconName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="images" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Image" syncable="YES"/>
+        <relationship name="from" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="screenInfos" inverseEntity="Person" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Image" inverseName="fromScreen" inverseEntity="Image" syncable="YES"/>
     </entity>
     <fetchRequest name="PersonTxai" entity="Person" predicateString="firstName == &quot;Txai&quot; AND lastName == &quot;Wieser&quot;" fetchLimit="1" includeSubentities="YES" includePropertyValues="YES"/>
     <elements>
         <element name="Achievement" positionX="-198" positionY="135" width="128" height="105"/>
         <element name="App" positionX="-288" positionY="560" width="128" height="180"/>
-        <element name="EducationalEvent" positionX="-198" positionY="135" width="128" height="105"/>
+        <element name="EducationalEvent" positionX="-198" positionY="135" width="128" height="120"/>
         <element name="Event" positionX="-54" positionY="36" width="128" height="150"/>
-        <element name="ExtraInfo" positionX="-189" positionY="144" width="128" height="105"/>
-        <element name="Image" positionX="-189" positionY="144" width="128" height="60"/>
+        <element name="ExtraInfo" positionX="-189" positionY="144" width="128" height="120"/>
+        <element name="Image" positionX="-189" positionY="144" width="128" height="90"/>
         <element name="Person" positionX="-342" positionY="-15" width="128" height="270"/>
-        <element name="ScreenInfo" positionX="-198" positionY="135" width="128" height="105"/>
+        <element name="ScreenInfo" positionX="-198" positionY="135" width="128" height="120"/>
     </elements>
 </model>

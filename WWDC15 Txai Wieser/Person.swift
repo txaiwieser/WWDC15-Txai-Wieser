@@ -2,7 +2,7 @@
 //  Person.swift
 //  WWDC15 Txai Wieser
 //
-//  Created by Txai Wieser on 24/04/15.
+//  Created by Txai Wieser on 26/04/15.
 //  Copyright (c) 2015 TDW. All rights reserved.
 //
 
@@ -21,11 +21,11 @@ class Person: NSManagedObject {
     @NSManaged var profileImageName: String
     @NSManaged var twitter: String
     @NSManaged var website: String
+    @NSManaged var educationalEvents: NSSet
     @NSManaged var extraInfos: NSSet
     @NSManaged var lifeAchievements: NSSet
     @NSManaged var lifeEvents: NSSet
     @NSManaged var myApps: NSSet
     @NSManaged var screenInfos: NSSet
-    @NSManaged var educationalEvents: NSSet
 
 }
