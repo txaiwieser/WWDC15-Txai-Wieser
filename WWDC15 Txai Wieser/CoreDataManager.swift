@@ -202,45 +202,45 @@ class CoreDataManager {
         // Achievement
         let si1 = ScreenInfo.newInstance()
         si1.order = 1
-        si1.iconName = "education_icon"
+        si1.iconName = "location_icon"
         si1.text = "My name is Txai Wieser, I’m 22 years old and I’m from Porto Alegre, Brazil."
         
         
         let si2 = ScreenInfo.newInstance()
         si2.order = 2
-        si2.iconName = "education_icon"
+        si2.iconName = "toy_icon"
         si2.text = "I have always been very curious about how things work. Even as a boy I already took apart my toys to see how they worked."
         
         let si3 = ScreenInfo.newInstance()
         si3.order = 3
-        si3.iconName = "education_icon"
+        si3.iconName = "electronic_icon"
         si3.text = "As time passed, I started to be more interested in electronic devices. Right after finishing high school I was also certified as an Electronic Technician."
         
         let si4 = ScreenInfo.newInstance()
         si4.order = 4
-        si4.iconName = "education_icon"
+        si4.iconName = "computer_icon"
         si4.text = "I was not yet completely satisfied. My interest in computers made me continue studying to get into a university. Then I started Computer Engineering at UFRGS!"
         
         let si5 = ScreenInfo.newInstance()
         si5.order = 5
-        si5.iconName = "education_icon"
+        si5.iconName = "cellIcon_0"
         si5.text = "I already was an Apple lover and already followed the mobile development world for a few years when I decided to learn to develop iOS applications."
         
         let si6 = ScreenInfo.newInstance()
         si6.order = 6
         si6.iconName = "education_icon"
-        si6.text = "Just after I started the course from Stanford on iTunes I found out that there would be an iOS course in town I lived. I knew this was an extremely rare and incredible opportunity! I just thought: \"I need to be chosen.\""
+        si6.text = "Just after I started the course from Stanford on iTunes I found out that there would be an iOS course in town I lived. I knew this was an extremely rare and an incredible opportunity! I just thought: \"I need to be chosen.\""
         
         
         let si7 = ScreenInfo.newInstance()
         si7.order = 7
-        si7.iconName = "education_icon"
+        si7.iconName = "cellIcon_17"
         si7.text = "Fortunately, I was approved, and I started as a student in the first edition of BEPiD (Brazilian Education Program for iOS Development), at PUCRS. It was an incredible year, I learned many things, improved my technical skills and created amazing projects."
         
         
         let si8 = ScreenInfo.newInstance()
         si8.order = 8
-        si8.iconName = "education_icon"
+        si8.iconName = "mac_icon"
         si8.text = "Another amazing event in my life was to be chosen to continue on BEPiD for another year, as senior student, continuing my projects and also helping new students."
         
         
@@ -252,7 +252,7 @@ class CoreDataManager {
         let ei1 = ExtraInfo.newInstance()
         ei1.name = "Veins"
         ei1.iconName = "veins_icon"
-        ei1.segueID = "ExperimentSegue"
+        ei1.segueID = "ExperimentsSegue"
         ei1.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
         
         let ei2 = ExtraInfo.newInstance()

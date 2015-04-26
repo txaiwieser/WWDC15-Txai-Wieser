@@ -23,12 +23,15 @@ class AppDetailTableViewController: UITableViewController {
         return v
     }()
     
+    @IBAction func popViewController() {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.estimatedRowHeight = 44;
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         
-        let effect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        let effect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
         //
         let effectView = UIVisualEffectView(effect: effect)
         effectView.frame = self.tableView.frame

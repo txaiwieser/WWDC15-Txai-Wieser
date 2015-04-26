@@ -17,6 +17,7 @@ class PersonDetailPageViewController: UIViewController {
     var imagesName:[String]?
     
     var color:UIColor = UIColor.whiteColor()
+    var item:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +43,9 @@ class PersonDetailPageViewController: UIViewController {
     }
     
     func updateAppleTV() {
-        let appleTVInterface = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AppleTVImageViewer") as! ImageViewerViewController
-        appleTVInterface.imagesName = imagesName
-        AppDelegate.$.currentAppleTVViewController = appleTVInterface
+        if let vc = AppDelegate.$.currentAppleTVViewController as? AppleTVLifeGraphMatchingViewController {
+            vc.selectedIndex = item
+        }
     }
     /*
     // MARK: - Navigation

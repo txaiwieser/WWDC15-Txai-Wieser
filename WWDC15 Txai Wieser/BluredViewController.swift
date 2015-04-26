@@ -32,18 +32,18 @@ class BluredViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         setNeedsStatusBarAppearanceUpdate()
-        let white = self.view.viewWithTag(7777) as! UIVisualEffectView
-        let dark = self.view.viewWithTag(9999) as! UIVisualEffectView
+        let white = self.view.viewWithTag(7777) as? UIVisualEffectView
+        let dark = self.view.viewWithTag(9999) as? UIVisualEffectView
         
 //        UIView.animateWithDuration(1, delay: 1, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
 //            white.alpha = 1
 //        }, completion: nil)
         
         UIView.animateWithDuration(1.4, delay: 0.3, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
-            white.alpha = 0
-            dark.alpha = 1
+            white?.alpha = 0
+            dark?.alpha = 1
             }) { (finished) -> Void in
-                white.removeFromSuperview()
+                white?.removeFromSuperview()
         }
     }
     override func didReceiveMemoryWarning() {

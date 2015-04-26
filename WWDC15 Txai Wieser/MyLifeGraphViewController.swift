@@ -49,8 +49,13 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     func updateAppleTV() {
-        let appleTVInterface = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AppleTVGraphView") as! UIViewController
-        AppDelegate.$.currentAppleTVViewController = appleTVInterface
+        if let vc = AppDelegate.$.currentAppleTVViewController as? AppleTVLifeGraphMatchingViewController {
+            vc.iconImageNames = nil
+        }
+        else {
+            let appleTVInterface = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AppleTVGraphView") as! AppleTVLifeGraphMatchingViewController
+            AppDelegate.$.currentAppleTVViewController = appleTVInterface
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -72,6 +77,10 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
             myVc.color = cell.tintColor
         }
         else if let myVc = controller as? LifeEventDetailViewController, let cell = sender as? LifeEventCollectionViewCell {
+            myVc.event = cell.lifeEvent
+            myVc.color = cell.tintColor
+        }
+        else if let nvc = controller as? UINavigationController, let myVc = nvc.viewControllers.first as? LifeEventDetailViewController, let cell = sender as? LifeEventCollectionViewCell {
             myVc.event = cell.lifeEvent
             myVc.color = cell.tintColor
         }
@@ -112,7 +121,7 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
         if let c = cell as? ExtrasCollectionViewCell {
             let segue = c.extraContent!.segueID
             switch segue {
-            case "ExperimentSegue":
+            case "ExperimentsSegue":
                 self.performSegueWithIdentifier(segue, sender: cell)
             default:
                 self.performSegueWithIdentifier("DefaultExtraSegue", sender: cell)
@@ -214,7 +223,14 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
         if motionManager != nil { self.stopMonitoring() }
     }
     
-    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if let vc = AppDelegate.$.currentAppleTVViewController as? AppleTVLifeGraphMatchingViewController {
+            let p = scrollView.contentOffset - (scrollView.contentSize/2 - scrollView.frame.size/2)
+            println(p)
+            vc.updateBackgroundWith(-p.angle + CGFloat(M_PI_2))
+        }
+
+    }
     
     // MARK: - Core Motion
 

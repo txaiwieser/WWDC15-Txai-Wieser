@@ -40,8 +40,16 @@ class ExtraInfoViewController: BluredViewController {
     
     
     func updateAppleTV() {
-        let appleTVInterface = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AppleTVImageViewer") as! ImageViewerViewController
-        AppDelegate.$.currentAppleTVViewController = appleTVInterface
+        if let name = extraContent?.name {
+            switch name {
+            case "Brazil":
+                
+            let appleTVInterface = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AppleTVMapViewController") as! MapViewController
+            AppDelegate.$.currentAppleTVViewController = appleTVInterface
+            default:
+                println(":)")
+            }
+        }
     }
     /*
     // MARK: - Navigation

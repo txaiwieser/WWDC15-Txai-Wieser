@@ -145,7 +145,7 @@ class OngoingVein: ShapeNodeDrawer {
     
     // FIXME:
     class func MAX_THICKNESS() -> Float {
-        return 10
+        return 6
     }
     class func MAX_DEPTH() -> Float {
         return 2000

@@ -16,21 +16,14 @@ class ExperimentsiOSViewController: BluredViewController {
     @IBOutlet weak var imgView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         titleLabel.text = experiment!.name
         descriptionLabel.text = experiment!.about
         imgView.image = UIImage(named: experiment!.iconName)
-        
-        
-//        titleLabel.textColor = self.color
-//        descriptionLabel.textColor = self.color
-//        imgView.image = imgView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-//        imgView.tintColor = self.color
-
         
         updateAppleTV(experiment!)
     }

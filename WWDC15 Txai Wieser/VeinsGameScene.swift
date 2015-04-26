@@ -9,20 +9,21 @@
 import SpriteKit
 
 class VeinsGameScene: SKScene {
-   lazy var mainManager:OngoingVeinsManager = OngoingVeinsManager(initialPosition: CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame)))
-    
+   var mainManager:OngoingVeinsManager!
     required init(coder: NSCoder) {
         fatalError("NSCoding not supported")
     }
     
     override init(size: CGSize) {
+        mainManager = OngoingVeinsManager(initialPosition: CGPoint(size: size/2), size: size)
+        
         super.init(size: size)
     }
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Ongoing Veins";
+        let myLabel = SKLabelNode(fontNamed:"Avenir Next - Regular")
+        myLabel.text = "Random Paths - \"Veins\"";
         myLabel.fontSize = 40;
         myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetHeight(self.frame)-60);
         

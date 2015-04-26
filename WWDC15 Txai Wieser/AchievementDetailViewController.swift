@@ -24,6 +24,10 @@ class AchievementDetailViewController: BluredViewController, UITableViewDataSour
         tableView.tableFooterView = UIView()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        updateAppleTV()
+    }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         var number = 2
         if let ach = achievement {
@@ -100,6 +104,17 @@ class AchievementDetailViewController: BluredViewController, UITableViewDataSour
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let vc = segue.destinationViewController as? AppDetailTableViewController {
             vc.app = (sender as! AppTableViewCell).app
+        }
+    }
+    
+    func updateAppleTV() {
+        if let vc = AppDelegate.$.currentAppleTVViewController as? AppleTVLifeGraphMatchingViewController {
+            vc.iconImageNames = [achievement!.iconName]
+        }
+        else {
+            let appleTVInterface = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AppleTVGraphView") as! AppleTVLifeGraphMatchingViewController
+            appleTVInterface.iconImageNames = [achievement!.iconName]
+            AppDelegate.$.currentAppleTVViewController = appleTVInterface
         }
     }
     

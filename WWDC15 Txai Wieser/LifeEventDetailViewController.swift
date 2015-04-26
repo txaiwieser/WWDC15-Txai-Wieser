@@ -24,6 +24,12 @@ class LifeEventDetailViewController: BluredViewController, UITableViewDataSource
         tableView.tableFooterView = UIView()
 
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        updateAppleTV()
+    }
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         var number = 1
         if let ev = event {
@@ -121,6 +127,16 @@ class LifeEventDetailViewController: BluredViewController, UITableViewDataSource
         cell.layoutMargins = UIEdgeInsetsZero
     }
     
+    func updateAppleTV() {
+        if let vc = AppDelegate.$.currentAppleTVViewController as? AppleTVLifeGraphMatchingViewController {
+            vc.iconImageNames = [event!.iconName]
+        }
+        else {
+            let appleTVInterface = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AppleTVGraphView") as! AppleTVLifeGraphMatchingViewController
+            appleTVInterface.iconImageNames = [event!.iconName]
+            AppDelegate.$.currentAppleTVViewController = appleTVInterface
+        }
+    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let vc = segue.destinationViewController as? AppDetailTableViewController {
             vc.app = (sender as! AppTableViewCell).app

@@ -12,7 +12,7 @@ class OngoingVeinsManager: SKNode {
     var mainArtery:OngoingVein!
     let testMode = true
 
-    let focus = CGSize(width:768-300, height: 1024-600)
+    let focus:CGSize!
     
     var depth:Float = 0
     var xvel:Float = 0
@@ -25,7 +25,8 @@ class OngoingVeinsManager: SKNode {
         fatalError("NSCoding not supported")
     }
     
-    init(initialPosition:CGPoint) {
+    init(initialPosition:CGPoint, size:CGSize) {
+        focus = size * 0.6
         super.init()
         position = initialPosition
         

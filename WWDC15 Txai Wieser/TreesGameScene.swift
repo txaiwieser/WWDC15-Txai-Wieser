@@ -11,16 +11,16 @@ import SpriteKit
 class TreesGameScene: SKScene {
     var activeBranches:[SKShapeNode] = []
     var branches:[SKShapeNode] = []
-    var depth: Int = 0
-    var maxDepth: Int = 2
+    var depth: Int = 5
+    var maxDepth: Int = 10
     var shouldRandomize = true
     var simetric = false
     var wind = false
 
-    var maxLenght:CGFloat = 100.0/5.0
+    var maxLenght:CGFloat = 100.0/2.0
     var minLenght:CGFloat = 50.0/8.0
-    var maxWidth:CGFloat = 1//18.0
-    var minWidth:CGFloat = 1//3.0
+    var maxWidth:CGFloat = 14.0
+    var minWidth:CGFloat = 3.0
     
     var minR1:CGFloat = 2.0
     var maxR1:CGFloat = 10.0
@@ -31,22 +31,30 @@ class TreesGameScene: SKScene {
 
     
     
-    override init(size: CGSize) {
-        super.init(size: size)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-        self.backgroundColor = SKColor.whiteColor()
+        self.backgroundColor = SKColor.blackColor()
         resetAndStartAgain()
+        
+
+        let wait = SKAction.waitForDuration(2)
+        let change = SKAction.runBlock { () -> Void in
+            self.resetAndStartAgain()
+        }
+        self.runAction(SKAction.repeatActionForever(SKAction.sequence([wait, change])))
     }
     
     func resetAndStartAgain() {
         setupTree()
+        
+        let label = SKLabelNode(text: "SpriteKit Trees")
+        label.fontName = "Avenir Next - Regular"
+        label.fontSize = 50
+        label.fontColor = SKColor.whiteColor()
+        label.position.y = self.size.height - 50
+        label.position.x = self.size.width/2
+        self.addChild(label)
         
         for (var i=0; i<maxDepth; i++)
         {
@@ -100,7 +108,7 @@ class TreesGameScene: SKScene {
         subBranch.lineWidth = (shouldRandomize ? randomNumber(rand_cons, to: 1.0) * currWidth : currWidth)
         subBranch.lineCap = kCGLineCapRound
         subBranch.lineJoin = kCGLineJoinRound
-        subBranch.strokeColor = SKColor.blackColor()
+        subBranch.strokeColor = SKColor.whiteColor()
         subBranch.name = "branch"+String(depth)
         return subBranch
     }

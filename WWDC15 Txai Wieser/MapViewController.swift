@@ -18,7 +18,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
-    let transitionTime:NSTimeInterval = 16
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,20 +33,19 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     func focusOnMe() {
         if let ground = me?.coordinate {
-            let p = MKMapPointForCoordinate(ground)
-            let r = MKMapRect(origin: p, size: MKMapSize(width: 0, height: 0))
-            map.setVisibleMapRect(r, animated: true)
+            UIView.animateWithDuration(4, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 1, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                self.map.setCenterCoordinate(ground, animated: false)
+            }, completion: nil)
         }
-        NSTimer.scheduledTimerWithTimeInterval(transitionTime+5, target: self, selector: Selector("focusOnWWDC"), userInfo: nil, repeats: false)
+        NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: Selector("focusOnWWDC"), userInfo: nil, repeats: false)
     }
     
     func focusOnWWDC() {
         let ground = wwdc.coordinate
-        let p = MKMapPointForCoordinate(ground)
-        let r = MKMapRect(origin: p, size: MKMapSize(width: 0, height: 0))
-        map.setVisibleMapRect(r, animated: true)
-
-        NSTimer.scheduledTimerWithTimeInterval(transitionTime+4, target: self, selector: Selector("focusOnMe"), userInfo: nil, repeats: false)
+        UIView.animateWithDuration(4.0, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: (UIViewAnimationOptions.CurveEaseInOut | UIViewAnimationOptions.BeginFromCurrentState), animations: { () -> Void in
+            self.map.setCenterCoordinate(ground, animated: false)
+            }, completion: nil)
+        NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: Selector("focusOnMe"), userInfo: nil, repeats: false)
     }
 
     // MARK: - Nested Type

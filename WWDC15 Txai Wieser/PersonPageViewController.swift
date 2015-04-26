@@ -41,15 +41,19 @@ class PersonDetailViewController: BluredViewController, UIPageViewControllerDele
         
     }
     
-
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        updateAppleTV()
+    }
     func reloadPageView(p:Person) {
         
-        for screen in p.orderedScreenInfosArray() {
+        for (index, screen) in enumerate(p.orderedScreenInfosArray()) {
             let vc = self.storyboard!.instantiateViewControllerWithIdentifier("Person1ID") as! PersonDetailPageViewController
             vc.view.backgroundColor = UIColor.clearColor()
             vc.text = screen.text
             vc.image = UIImage(named: screen.iconName)
             vc.color = self.color
+            vc.item = index
             let array = Array(screen.images) as! [Image]
             vc.imagesName = array.map { $0.imgName }
             myViewControllers.append(vc)
@@ -80,6 +84,7 @@ class PersonDetailViewController: BluredViewController, UIPageViewControllerDele
         index--
         return myViewControllers[index]
     }
+    
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         var index = Int(find(myViewControllers, viewController)!)
         
@@ -93,10 +98,24 @@ class PersonDetailViewController: BluredViewController, UIPageViewControllerDele
         }
         return myViewControllers[index]
     }
+    
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
         return myViewControllers.count
     }
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
         return 0
+    }
+    
+    func updateAppleTV() {
+        if let vc = AppDelegate.$.currentAppleTVViewController as? AppleTVLifeGraphMatchingViewController {
+            let nms = person?.orderedScreenInfosArray().map { $0.iconName }
+            vc.iconImageNames = nms
+        }
+        else {
+            let appleTVInterface = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AppleTVGraphView") as! AppleTVLifeGraphMatchingViewController
+            let nms = person?.orderedScreenInfosArray().map { $0.iconName }
+            appleTVInterface.iconImageNames = nms
+            AppDelegate.$.currentAppleTVViewController = appleTVInterface
+        }
     }
 }

@@ -15,6 +15,7 @@
 		E956BA5F1AEA861F007C1F58 /* EducationalEvent+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956BA5E1AEA861F007C1F58 /* EducationalEvent+Extension.swift */; };
 		E956BA611AEA9E83007C1F58 /* ExtraInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956BA601AEA9E83007C1F58 /* ExtraInfoViewController.swift */; };
 		E956BA631AEB0679007C1F58 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956BA621AEB0679007C1F58 /* UIColor+Extension.swift */; };
+		E956BA651AEBA13D007C1F58 /* AppleTVLifeGraphMatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956BA641AEBA13D007C1F58 /* AppleTVLifeGraphMatchingViewController.swift */; };
 		E9665F781AE722E700302714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9665F771AE722E700302714 /* AppDelegate.swift */; };
 		E9665F7B1AE722E700302714 /* WWDC15_Txai_Wieser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9665F791AE722E700302714 /* WWDC15_Txai_Wieser.xcdatamodeld */; };
 		E9665F801AE722E700302714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9665F7E1AE722E700302714 /* Main.storyboard */; };
@@ -92,6 +93,7 @@
 		E956BA5E1AEA861F007C1F58 /* EducationalEvent+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EducationalEvent+Extension.swift"; sourceTree = "<group>"; };
 		E956BA601AEA9E83007C1F58 /* ExtraInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtraInfoViewController.swift; sourceTree = "<group>"; };
 		E956BA621AEB0679007C1F58 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		E956BA641AEBA13D007C1F58 /* AppleTVLifeGraphMatchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleTVLifeGraphMatchingViewController.swift; sourceTree = "<group>"; };
 		E9665F721AE722E700302714 /* WWDC15 Txai Wieser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC15 Txai Wieser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9665F761AE722E700302714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9665F771AE722E700302714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				E9DA07FB1AE725B50078AF48 /* ImageViewerViewController.swift */,
 				E9DA07FF1AE725B50078AF48 /* MapViewController.swift */,
 				E9DA08121AE725B50078AF48 /* WebViewController.swift */,
+				E956BA641AEBA13D007C1F58 /* AppleTVLifeGraphMatchingViewController.swift */,
 				E9DA07DF1AE725A70078AF48 /* ExperimentsAppleTVViewController.swift */,
 			);
 			name = AppleTVViewControllers;
@@ -540,6 +543,7 @@
 				E9DA08181AE725B50078AF48 /* MapViewController.swift in Sources */,
 				E9DA081B1AE725B50078AF48 /* OngoingVeinsManager.swift in Sources */,
 				E9DA081A1AE725B50078AF48 /* OngoingVein.swift in Sources */,
+				E956BA651AEBA13D007C1F58 /* AppleTVLifeGraphMatchingViewController.swift in Sources */,
 				E9DA07CE1AE725970078AF48 /* AchievementCollectionViewCell.swift in Sources */,
 				E956BA5B1AEA85F6007C1F58 /* Person.swift in Sources */,
 				E9DA08211AE725B50078AF48 /* ScreenInfo.swift in Sources */,

@@ -26,7 +26,7 @@ class SocialViewController: UIViewController, UITableViewDataSource, UITableView
         // Do any additional setup after loading the view.
         contactTableView.dataSource = self
         contactTableView.delegate = self
-        contactTableView.estimatedRowHeight = 44
+        contactTableView.estimatedRowHeight = 81
         contactTableView.rowHeight = UITableViewAutomaticDimension
         let effect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
         contactTableView.separatorEffect = UIVibrancyEffect(forBlurEffect: effect)

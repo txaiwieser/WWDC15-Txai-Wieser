@@ -29,7 +29,7 @@ class ImageViewerViewController: UIViewController {
             var images = [UIImageView]()
             for (index, img) in enumerate(imgNames) {
                 let iv = UIImageView(frame: self.scrollView.frame)
-                iv.contentMode = .ScaleAspectFit
+                iv.contentMode = .ScaleAspectFill
                 iv.image = UIImage(named: img)
                 
                 iv.frame.origin.x = self.scrollView.frame.size.width*CGFloat(index)

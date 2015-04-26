@@ -18,6 +18,9 @@ class ExperimentsAppleTVViewController: UIViewController {
         super.viewDidAppear(animated)
         skView.backgroundColor = UIColor.clearColor()
         skView.allowsTransparency = true
+        skView.showsDrawCount = true
+        skView.showsNodeCount = true
+        
         switch experiment {
         case 3:
             self.thirdExperiment()
