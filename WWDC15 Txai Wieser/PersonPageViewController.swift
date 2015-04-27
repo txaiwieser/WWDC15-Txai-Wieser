@@ -32,6 +32,7 @@ class PersonDetailViewController: BluredViewController, UIPageViewControllerDele
         super.viewDidLoad()
         self.pageViewController.delegate = self
         self.pageViewController.dataSource = self
+        self.pageViewController.view.frame = self.view.bounds
         self.addChildViewController(pageViewController)
         self.view.insertSubview(pageViewController.view, atIndex: 2)
         
@@ -49,6 +50,7 @@ class PersonDetailViewController: BluredViewController, UIPageViewControllerDele
         
         for (index, screen) in enumerate(p.orderedScreenInfosArray()) {
             let vc = self.storyboard!.instantiateViewControllerWithIdentifier("Person1ID") as! PersonDetailPageViewController
+            vc.view.frame = self.view.bounds
             vc.view.backgroundColor = UIColor.clearColor()
             vc.text = screen.text
             vc.image = UIImage(named: screen.iconName)

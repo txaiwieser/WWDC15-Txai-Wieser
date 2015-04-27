@@ -61,4 +61,21 @@ class AchievementCollectionViewCell: UICollectionViewCell {
         iconImageView.image = UIImage(named: achiev.iconName)
         iconImageView.tintColor = UIColor.whiteColor()
     }
+    
+    func scaleUp(by amount:CGFloat, from cFrame:CGRect) {
+        let cSize = cFrame.size*amount
+        let cPos = cFrame.origin - (cSize - cFrame.size)/2
+        
+        UIView.animateWithDuration(0.2, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.8, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+            self.frame = CGRect(origin: cPos, size: cSize)
+            }, completion: nil)
+    }
+    
+    func scaleDown(from cFrame:CGRect) {
+        let cSize = cFrame.size
+        let cPos = cFrame.origin
+        UIView.animateWithDuration(0.2, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.8, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+            self.frame = CGRect(origin: cPos, size: cSize)
+            }, completion: nil)
+    }
 }

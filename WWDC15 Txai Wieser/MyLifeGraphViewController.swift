@@ -101,7 +101,23 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
     
     @IBAction func dismissAnyModel() {
         self.dismissViewControllerAnimated(true, completion: nil)
-        self.setNeedsStatusBarAppearanceUpdate()
+
+        
+        let sections = self.collectionView!.numberOfSections()
+        
+        for i in 0 ..< sections {
+            let cells = self.collectionView!.numberOfItemsInSection(i)
+            
+            for j in 0 ..< cells {
+                let indexPath = NSIndexPath(forItem: j, inSection: i)
+                println(indexPath)
+                self.collectionView.deselectItemAtIndexPath(indexPath, animated: true)
+                let cell = self.collectionView.cellForItemAtIndexPath(indexPath)
+            }
+        }
+        
+        
+        
         updateAppleTV()
     }
     
@@ -127,27 +143,30 @@ class MyLifeGraphViewController: UIViewController, UICollectionViewDataSource, U
                 self.performSegueWithIdentifier("DefaultExtraSegue", sender: cell)
             }
         }
-    }
-    
-    var animating = false
-    func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
-        let cell = collectionView.cellForItemAtIndexPath(indexPath)!
-        let cFrame = collectionView.collectionViewLayout.layoutAttributesForItemAtIndexPath(indexPath).frame
 
+        // animation
+        let cFrame = collectionView.collectionViewLayout.layoutAttributesForItemAtIndexPath(indexPath).frame
+        
         if let c = cell as? LifeEventCollectionViewCell {
-            c.scaleUp(by: 1.6, from: cFrame)
+            c.scaleUp(by: 1.1, from: cFrame)
         }
+        if let c = cell as? AchievementCollectionViewCell {
+            c.scaleUp(by: 1.1, from: cFrame)
+        }
+
     }
     
-    func collectionView(collectionView: UICollectionView, didUnhighlightItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+        // animation
         let cell = collectionView.cellForItemAtIndexPath(indexPath)!
         let cFrame = collectionView.collectionViewLayout.layoutAttributesForItemAtIndexPath(indexPath).frame
         
         if let c = cell as? LifeEventCollectionViewCell {
             c.scaleDown(from: cFrame)
         }
-        
-        
+        if let c = cell as? AchievementCollectionViewCell {
+            c.scaleDown(from: cFrame)
+        }
     }
     
     // MARK: - UICollectionView Data Source

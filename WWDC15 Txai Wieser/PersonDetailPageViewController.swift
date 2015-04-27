@@ -9,7 +9,7 @@
 import UIKit
 
 class PersonDetailPageViewController: UIViewController {
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var label: UITextView!
     @IBOutlet weak var imgView: UIImageView!
     
     var text:String?

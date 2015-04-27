@@ -74,7 +74,6 @@
 		E9DA082A1AE725B50078AF48 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA08121AE725B50078AF48 /* WebViewController.swift */; };
 		E9F092031AEC8F870062A52C /* repel_video_promo_v05.mov in Resources */ = {isa = PBXBuildFile; fileRef = E9F092021AEC8F870062A52C /* repel_video_promo_v05.mov */; };
 		E9F092051AEC9B830062A52C /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F092041AEC9B830062A52C /* MovieViewController.swift */; };
-		E9F092081AECB5BC0062A52C /* ballphy_video_demo_v01.mov in Resources */ = {isa = PBXBuildFile; fileRef = E9F092071AECB5BC0062A52C /* ballphy_video_demo_v01.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +104,7 @@
 		E9665F8A1AE722E700302714 /* WWDC15 Txai WieserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WWDC15 Txai WieserTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9665F8F1AE722E700302714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9665F901AE722E700302714 /* WWDC15_Txai_WieserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC15_Txai_WieserTests.swift; sourceTree = "<group>"; };
+		E98029A81AEDE91C00A64EE2 /* ballphy_video_demo_v01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ballphy_video_demo_v01.mp4; sourceTree = "<group>"; };
 		E98ECCF41AE97035007D1036 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		E98ECCFA1AE9CC9F007D1036 /* BluredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluredViewController.swift; sourceTree = "<group>"; };
 		E99E19501AED5185001BABB4 /* ExtraInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtraInfo.swift; sourceTree = "<group>"; };
@@ -160,7 +160,6 @@
 		E9DA08121AE725B50078AF48 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		E9F092021AEC8F870062A52C /* repel_video_promo_v05.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = repel_video_promo_v05.mov; sourceTree = "<group>"; };
 		E9F092041AEC9B830062A52C /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
-		E9F092071AECB5BC0062A52C /* ballphy_video_demo_v01.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ballphy_video_demo_v01.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,7 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				E9F092021AEC8F870062A52C /* repel_video_promo_v05.mov */,
-				E9F092071AECB5BC0062A52C /* ballphy_video_demo_v01.mov */,
+				E98029A81AEDE91C00A64EE2 /* ballphy_video_demo_v01.mp4 */,
 				E9665F7E1AE722E700302714 /* Main.storyboard */,
 				E9665F811AE722E700302714 /* Images.xcassets */,
 				E9665F831AE722E700302714 /* LaunchScreen.xib */,
@@ -453,6 +452,7 @@
 				TargetAttributes = {
 					E9665F711AE722E700302714 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 99MCMQ6KGP;
 					};
 					E9665F891AE722E700302714 = {
 						CreatedOnToolsVersion = 6.3;
@@ -486,7 +486,6 @@
 			files = (
 				E9665F801AE722E700302714 /* Main.storyboard in Resources */,
 				E9F092031AEC8F870062A52C /* repel_video_promo_v05.mov in Resources */,
-				E9F092081AECB5BC0062A52C /* ballphy_video_demo_v01.mov in Resources */,
 				E9665F851AE722E700302714 /* LaunchScreen.xib in Resources */,
 				E9665F821AE722E700302714 /* Images.xcassets in Resources */,
 			);
@@ -694,6 +693,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "WWDC15 Txai Wieser/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -704,6 +704,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "WWDC15 Txai Wieser/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

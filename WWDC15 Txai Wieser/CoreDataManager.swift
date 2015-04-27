@@ -54,8 +54,7 @@ class CoreDataManager {
         app1.appID = "914081825"
         app1.available = true
         app1.videoName = "repel_video_promo_v05"
-        app1.appDescription = "Repel is a game based on physics concepts. The purpose of the game is to solve puzzles, interacting with the characters and finding out the abilities they have.\n\nThe objective of Repel is to entertain and gradually establish a relation between the game and the physics concepts.\n\nSo while playing and having fun, the player learns and also gets motivated to understand more about the concepts of the game.\n\nFind more about this challenging game that was hidden upon the universe of physics.\n\nThe idea behind Repel is to present some of the basic elementary physics concepts to the player while he is enjoying a challenging puzzle.\n\nLearning to play and playing to learn."
-        
+        app1.appDescription = "Repel is a game based on physics concepts. The purpose of the game is to solve puzzles, by interacting with the characters and finding out what abilities they have.\n\nThe objective of Repel is to entertain and gradually establish a relationship between the game and physics concepts.\n\nSo while playing and having fun, the player learns and is motivated to understand more about the concepts of the game.\n\nFinding out more about this challenging game than was hidden upon the universe of physics.\n\nThe idea behind Repel is to present basic elementary physics concepts to the player while enjoying a challenging puzzle.\n\nLearning to play and playing to learn."
 
         
         let app2 = App.newInstance()
@@ -65,7 +64,7 @@ class CoreDataManager {
         app2.appID = "00000000000000000" // Warning: Replace
         app2.available = false
         app2.videoName = ""
-        app2.appDescription = "Recolorindo o Reino (Painting the Kingdom) provides a different gaming experience to the kids.\n\nBeyond the education system, it encourages players to interact with the outside world to complete challenges of the game.\n\nThe idea I had when I created this game was what I could do to encourage children to not stand still to have fun with their devices.\n\nIt uses sensors, such as the device camera, to capture real-world information and merge them in the game."
+        app2.appDescription = "Recolorindo o Reino (Painting the Kingdom) provides a different gaming experience to kids.\n\nBeyond the education system, it encourages players to interact with the outside world to complete the challenges of the game.\n\nThe idea I had when I created this game was what could I do to encourage children to be active and have fun with their devices.\n\nIt uses sensors, such as the device camera, to capture real-world information and merge them in the game."
         
         let app2img1 = Image.newInstance()
         app2img1.imgName = "recolorindo_image1"
@@ -89,7 +88,7 @@ class CoreDataManager {
         app3.appID = "00000000000000000" // Warning: Replace
         app3.available = false
         app3.videoName = "ballphy_video_demo_v01"
-        app3.appDescription = "The idea behind Balphy is to present some of the basic elementary mechanical physics concepts to the player while he is enjoying a challenging puzzle.\n\n\"Gaming is fun. And learning could be fun too!\"\n\nThrough play, users learn about how the events of the real world happen, and as they play, they solve physics related problems.\n\nAfter playing this game, players will be able to relate some of the game challenges with the real world events, and with that it will be easy to master the environment understanding."
+        app3.appDescription = "The idea behind Balphy is to present some of the basic elementary mechanical physics concepts to the player while he is enjoying a challenging puzzle.\n\n\"Gaming is fun. And learning should be fun too!\"\n\nThrough play, users learn about how the events of the real world happen, and they are required to solve physics related problems.\n\nAfter playing this game, players will be able to relate some of the game challenges with the real world, and in doing will improve their ability to master environmental understanding."
 
         
         let app4 = App.newInstance()
@@ -99,7 +98,7 @@ class CoreDataManager {
         app4.appID = "00000000000000000" // Warning: Replace
         app4.available = false
         app4.videoName = ""
-        app4.appDescription = "Shapes is a simple game that I'm creating with my younger brother, in order to encourage him to learn a programming language (Swift) and improove his design skills while we have fun.\n\nIn this game geometric shapes go down on the screen and the player must turn a crown where there are molded shapes, the range that shapes appear decreases and the goal is to fit a maximum of shapes in place subsequently."
+        app4.appDescription = "Shapes is a simple game that I'm creating with my younger brother.\n\nIt encourages him to learn a programming language (Swift) and improve his design skills, while we have fun together.\n\nIn this game, geometric shapes go down on the screen and the player must turn a crown where there are molded shapes. The range that shapes appear decreases and the goal is to fit a maximum number of shapes in place subsequently."
         
         let app4img1 = Image.newInstance()
         app4img1.imgName = "shapes_image1"
@@ -125,7 +124,7 @@ class CoreDataManager {
         let ach2 = Achievement.newInstance()
         ach2.name = "Professional Background"
         ach2.iconName = "professional_icon"
-        ach2.longDescription = "I started helping people with computers and electronic devices when I was little, and by the time I was in college it already was like a part-time job for me.\n\nWhen I started my first adventures with web programming I started doing some work for friends and acquaintances. Just when I went to college I started working on PET's Intelligent Robotics Laboratory, programming in C, playing with Arduinos, Microcontrollers, Lego Mindstorms and a Rubik's Cube robot assembler.\n\nAfter more than a year working there, BEPiD began and I started to work on my own projects."
+        ach2.longDescription = "I started helping people with computers and electronic devices when I was little, and by the time I was in college it was like a part-time job for me.\n\nWhen I started my first adventures with web programming, I started doing some work for friends and acquaintances.  When I went to college I started working on PET's Intelligent Robotics Laboratory, programming in C, playing with Arduinos, Microcontrollers, Lego Mindstorms and a Rubik's Cube robot assembler.\n\nAfter more than a year working there, BEPiD began and I started to work on my own projects."
         
         
         let ach3 = Achievement.newInstance()
@@ -137,7 +136,7 @@ class CoreDataManager {
         let ach4 = Achievement.newInstance()
         ach4.name = "Interests"
         ach4.iconName = "interests_icon"
-        ach4.longDescription = "I generally am very interested in education, so I try to apply it in other things I like, such as applications and games with new ways of interaction!\n\nAlso, I really like electronics and physical objects embedded with electronics, software, sensors and connectivity."
+        ach4.longDescription = "I am generally very interested in education, so I try to apply it in other things I like, such as applications and games with new ways of interaction.\n\nAlso, I really like electronics and physical objects embedded with electronics, software, sensors and connectivity."
         
         
         ach1.from = p; ach2.from = p; ach3.from = p; ach4.from = p
@@ -162,7 +161,7 @@ class CoreDataManager {
         ee3.order = 4
         ee3.name = "FEDERAL UNIVERSITY OF RIO GRANDE DO SUL"
         ee3.time = "Started in 2012"
-        ee3.about = "Computer engineering. UFRGS has one of the best computer engeneering course of Brazil! I am proud to study there."
+        ee3.about = "Computer engineering. UFRGS has one of the best computer engeneering courses in Brazil! I am proud to study there."
         
         
         let ee4 = EducationalEvent.newInstance()
@@ -181,8 +180,8 @@ class CoreDataManager {
         ev1.name = "WWDC"
         ev1.iconName = "wwdc15_icon"
         ev1.smallDescription = "The epicenter\nof change."
-        ev1.longDescription1 = "That's where I want to be!\n\nBeing part of this change!\n\nRight in the epicenter of technology development!\n\nSharing experiences with amazing developers, and learning from the best engineers."
-        ev1.longDescription2 = "Winning the scholarship would be incredible for me!\n\nIt's the perfect chance to meet Silicon Valley, interact with the best development community and learn a lot.\n\nThus, I can continue creating great apps and teaching others what I’ve learned."
+        ev1.longDescription1 = "That's where I want to be!!\n\nBeing part of this change.\n\nRight in the epicenter of technology development.\n\nSharing experiences with amazing developers and learning from the best engineers."
+        ev1.longDescription2 = "Winning the scholarship would be incredible.\n\nIt's the perfect opportunity to meet contacts Silicon Valley, interact with the best development community, and learn.\n\nThus, I can continue creating great apps and teaching others what I’ve learned."
         
         
         
@@ -190,7 +189,7 @@ class CoreDataManager {
         ev2.name = "Open Source"
         ev2.iconName = "opensource_icon"
         ev2.smallDescription = "Part of the learning process is sharing what you know with others."
-        ev2.longDescription1 = "I made available some of my projects on Github for anyone to see and use.\n\nThe most popular is TWControls!\n\nIt is a set of controls (buttons and switches) for SpriteKit.\n\nThe controls were written in Swift, using the power of clusures and optionals, and are very easy to use!"
+        ev2.longDescription1 = "I created several projects on Github and they are available for anyone to see and use.\n\nThe most popular is TWControls!\n\nIt is a set of controls (buttons and switches) for SpriteKit.\n\nThe controls were written in Swift, using the power of clusures and optionals, and are very easy to use."
       
         
         
@@ -205,8 +204,8 @@ class CoreDataManager {
         ev4.name = "iOS"
         ev4.iconName = "iphone_icon"
         ev4.smallDescription = "iOS Development"
-        ev4.longDescription1 = "Since I began studying iOS, I've been attending classes, reading, doing research and attending to conferences to be always up-to-date with all major frameworks available."
-        ev4.longDescription2 = "This year in addition to be helping new students at BEPiD I had the opportunity to talk about memory management in Swift at CocoaHeadsBR-POA. It was an amazing experience!"
+        ev4.longDescription1 = "Since I began studying iOS, I have been attending classes, reading, doing research and attending conferences to be up-to-date with all major frameworks available."
+        ev4.longDescription2 = "This year, in addition to be helping new students at BEPiD, I had the opportunity to talk about memory management in Swift at CocoaHeadsBR-POA. It was a truly amazing and rewarding experience for me."
         ev4.longDescription3 = "Some of the main frameworks I worked with are:\n\n- SpriteKit\n\n- SceneKit\n\n- App Extensions\n\n- Touch ID\n\n- MapKit\n\n- And all major UIKit components"
         
         ev1.from = p; ev2.from = p; ev3.from = p; ev4.from = p
@@ -219,39 +218,37 @@ class CoreDataManager {
         let si1 = ScreenInfo.newInstance()
         si1.order = 1
         si1.iconName = "location_icon"
-        si1.text = "My name is Txai Wieser, I’m 22 years old and I’m from Porto Alegre, Brazil."
-        
+        si1.text = "My name is, Txai Wieser. I am 22 years old and from Porto Alegre, Brazil. "
         
         let si2 = ScreenInfo.newInstance()
         si2.order = 2
         si2.iconName = "toy_icon"
-        si2.text = "I have always been very curious about how things work. Even as a boy I already took apart my toys to see how they worked."
+        si2.text = "I have always been extremely curious about how things work. When I was a kid I would take my toys apart just to satisfy my curiosity and try to find out what made each toy light up, walk, or wind up."
         
         let si3 = ScreenInfo.newInstance()
         si3.order = 3
         si3.iconName = "electronic_icon"
-        si3.text = "As time passed, I started to be more interested in electronic devices. Right after finishing high school I was also certified as an Electronic Technician."
+        si3.text = "I became increasingly interested in electronic devices as I grew older. By the time I graduated from high school I was already certifying as an electronic technician."
         
         let si4 = ScreenInfo.newInstance()
         si4.order = 4
         si4.iconName = "computer_icon"
-        si4.text = "I was not yet completely satisfied. My interest in computers made me continue studying to get into a university. I started Computer Engineering at UFRGS!"
+        si4.text = "My curiosity was not satisfied, however, and I pursued further knowledge of electronics and computers. I continued to study to get in to college and eventually began studying computer engineering at UFRGS!"
         
         let si5 = ScreenInfo.newInstance()
         si5.order = 5
         si5.iconName = "cellIcon_0"
-        si5.text = "I already was an Apple lover and already followed the mobile development world for a few years when I decided to learn to develop iOS applications."
+        si5.text = "I already loved Apple and closely followed the mobile development world for a few years when I decided to learn how to develop iOS applications."
         
         let si6 = ScreenInfo.newInstance()
         si6.order = 6
         si6.iconName = "education_icon"
-        si6.text = "Just after I started the course from Stanford on iTunes I found out that there would be an iOS course in the town I lived. I knew this was extremely rare and an incredible opportunity! I just thought: \"I need to be chosen.\""
-        
+        si6.text = "I started taking a course from Stanford University on iTunes U and found out that there would be an iOS course offered in the town where I lived. I knew this was extremely rare and an incredible opportunity for me. I remember thinking to myself, \"I have to be chosen!\""
         
         let si7 = ScreenInfo.newInstance()
         si7.order = 7
         si7.iconName = "cellIcon_17"
-        si7.text = "Fortunately, I was approved, and I started as a student in the first edition of BEPiD (Brazilian Education Program for iOS Development), at PUCRS. It was an incredible year, I learned many things, improved my technical skills and created amazing projects."
+        si7.text = "Fortunately, I was approved for the program and started as a student in the first edition of BEPiD (Brazilian Education Program for iOS Development), at PUCRS. It was an incredible year for me! I learned so many things, improved my technical skills and created amazing projects."
         
         
         let si8 = ScreenInfo.newInstance()
@@ -269,19 +266,19 @@ class CoreDataManager {
         ei1.name = "Random Paths"
         ei1.iconName = "veins_icon"
         ei1.segueID = "ExperimentsSegue"
-        ei1.about = "I like algorithms and random paths and to simulate real things in computers.\n\nSoon after the Swift was announced I started to do some tests using SriteKit! This is one of them!\n\nThe main artery follows random paths and suddenly splits into many other mini-arteries."
+        ei1.about = "I enjoy algorithms, random paths and simulating real things in computers. When Swift was announced, I started doing tests using SriteKit.\n\nThis is an example of it.\n\nThe main artery follows random paths and suddenly splits into many other mini-arteries."
         
         let ei2 = ExtraInfo.newInstance()
         ei2.name = "Trees"
         ei2.iconName = "trees_icon"
         ei2.segueID = "ExperimentsSegue"
-        ei2.about = "I like algorithms and random paths and to simulate real things in computers.\n\nSoon after the Swift was announced I started to do some tests using SriteKit! This is one of them!\n\nA simple node-based tree that has many randomized parameters for a more realistic result!"
+        ei2.about = "This is another example of a project I was doing while learning Swift\n\nA simple node-based tree that has many randomized parameters for a more realistic result."
 
         let ei3 = ExtraInfo.newInstance()
         ei3.name = "Swift <3"
         ei3.iconName = "swift_icon"
         ei3.segueID = ""
-        ei3.about = "When I was watching the WWDC14 stream and Swift was announced I was shocked. I loved Objective-C, and with swift everything I had learned would become useless.\n\nBut I was wrong, and after I started testing I was liking more and more the language! Today when I have to program in Objective-C again I see how much I love this new language and its incredible features!"
+        ei3.about = "When I was watching the WWDC14 stream and Swift was announced I was shocked. I used to love Objective-C and with Swift everything I had learned would become useless.\n\nBut I was wrong. After I started testing, I was starting to enjoy the language more and more! When I have to program in Objective-C now, I see how much I love this new language and its incredible features."
 
         
         let ei4 = ExtraInfo.newInstance()
@@ -295,26 +292,26 @@ class CoreDataManager {
         ei5.name = "Community Work"
         ei5.iconName = "community_icon"
         ei5.segueID = ""
-        ei5.about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a quam fringilla, ullamcorper arcu eget, rutrum risus.\n\nIn hac habitasse platea dictumst. Morbi vel sagittis lectus. Fusce volutpat libero vitae urna scelerisque vehicula.\nPhasellus blandit varius erat, non consectetur massa consequat a."
+        ei5.about = "Always when I can I volunteer to do community work and help others!"
         
         let ei6 = ExtraInfo.newInstance()
         ei6.name = "Drones"
         ei6.iconName = "drone_icon"
         ei6.segueID = ""
-        ei6.about = "For some time I had been admiring and researching about drones. And in the last vacation college I built one from scratch.I chose an hexacopter, and even created the mechanical part of the project!\n\nIt was an amazing experience and I plan to build a another version in the future!"
+        ei6.about = "I have also been admiring and researching drones for some time. During my last vacation in college I built one from scratch. I chose a hexacopter, and even designed and manufactured all of the mechanics myself.\n\nIt was an amazing experience and I plan to build another version in the near future."
         
         let ei7 = ExtraInfo.newInstance()
         ei7.name = "Sports"
         ei7.iconName = "windsurf_icon"
         ei7.segueID = ""
-        ei7.about = "Besides the technological stuff I also like sports, especially water sports.\n\nI love Windsurfing!\n\nI practice Windsurf in partnership with my father and cousins!"
+        ei7.about = "Besides my technological interests, I like sports - especially water sports.\n\nI love Windsurfing!\n\nI windsurf with my father and cousins as much as I possibly can."
         
         
         let ei8 = ExtraInfo.newInstance()
         ei8.name = "Music"
         ei8.iconName = "music_icon"
         ei8.segueID = ""
-        ei8.about = "Music is part of my life! I'm always listening to good music!\n\nI play the piano and that's one of the things I like the most and that make feel great!\n\nI'm really inspired by music!"
+        ei8.about = "Music is also a huge part of my life. I am always listening to music and discovering new artists.\n\nPlaying piano is one of my favorite hobbies and brings me tremendous pleasure to express myself musically.\n\nMusic inspires every aspect of my life!"
         
         return [ei1, ei2, ei3, ei4, ei5, ei6, ei7, ei8]
     }
