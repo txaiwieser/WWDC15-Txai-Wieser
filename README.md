@@ -1,4 +1,4 @@
-# WWDC15-Txai-Wieser - My application for the WWDC 2015 Scholarship!
+# WWDC15 - Txai Wieser - 2015 Scholarship!
 
 ## **DESCRIPTION**
 This App was made to show my skills, my interests, and try to explain a little about who I am.
