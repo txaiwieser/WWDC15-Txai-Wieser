@@ -8,8 +8,8 @@ It was written completely in Swift and the inteface was created using a mixture 
 On the main screen you find a collection of various aspects of my life!
 You are free to explore them.
 
-![Demo1](https://github.com/txaidw/TWControls/blob/master/ss1.png)
+![Demo1](https://github.com/txaidw/WWDC15-Txai-Wieser/blob/master/ss1.png)
 
-![Demo1](https://github.com/txaidw/TWControls/blob/master/ss2.png)
+![Demo1](https://github.com/txaidw/WWDC15-Txai-Wieser/blob/master/ss2.png)
 
-![Demo1](https://github.com/txaidw/TWControls/blob/master/ss3.png)
+![Demo1](https://github.com/txaidw/WWDC15-Txai-Wieser/blob/master/ss3.png)
